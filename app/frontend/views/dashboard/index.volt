@@ -1,36 +1,11 @@
 {% block content %}
 
 				<div class="col-lg-8 col-lg-push-3 col-md-12">
-					<form class="box-typical">
-						<input type="text" class="write-something" placeholder="Write Something..."/>
-						<div class="box-typical-footer">
-							<div class="tbl">
-								<div class="tbl-row">
-									<div class="tbl-cell">
-										<button type="button" class="btn-icon">
-											<i class="font-icon font-icon-earth"></i>
-										</button>
-										<button type="button" class="btn-icon">
-											<i class="font-icon font-icon-picture"></i>
-										</button>
-										<button type="button" class="btn-icon">
-											<i class="font-icon font-icon-calend"></i>
-										</button>
-										<button type="button" class="btn-icon">
-											<i class="font-icon font-icon-video-fill"></i>
-										</button>
-									</div>
-									<div class="tbl-cell tbl-cell-action">
-										<button type="submit" class="btn btn-rounded">Send</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</form><!--.box-typical-->
+					
 
 					<section class="card">
                                             <div class="card-block">
-                                                <form>
+                                                <form method="post">
                                                     <h5 class="with-border m-t-lg">PAGE 1</h5>
                                                     <div class="row">
                                                         <div class="col-lg-6">
@@ -436,10 +411,11 @@
                                                         </div>
                                                         
                                                     </div><!--.row-->
-                                                </form><!--.box-typical-->
+                                               
                                             </div>
-                                            <button type="button" class="btn btn-inline btn-primary">NEXT PAGE</button>
+                                            <button type="submit" class="btn btn-inline btn-primary">NEXT PAGE</button>
                                             <button type="reset" class="btn btn-inline btn-success">RESET</button>
+                                             </form><!--.box-typical-->
                                         </section>
 
 					

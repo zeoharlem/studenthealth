@@ -25,6 +25,7 @@ class JambController extends BaseController{
             if($jambNumber != false){
                 $response->setJsonContent(array('status' => true, 
                     'data' => $jambNumber->jamb_registration_number));
+                $this->session->set('jambregno', $this->request->getPost('textForm'));
                 $response->send(); exit();
             }
             else{

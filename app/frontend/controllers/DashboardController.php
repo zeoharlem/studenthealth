@@ -25,6 +25,9 @@ class DashboardController extends BaseController{
     }
     
     public function indexAction(){
+        if($this->request->isPost()){
+            $this->response->redirect('dashboard/next1');
+        }
         $this->assets->collection('footers')
                 ->addJs('assets/admin/js/lib/bootstrap-select/bootstrap-select.min.js');
         $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_AFTER_TEMPLATE);
@@ -32,6 +35,18 @@ class DashboardController extends BaseController{
     }
     
     public function next1Action(){
+        if($this->request->isPost()){
+            $this->response->redirect('dashboard/next2');
+        }
+        $this->assets->collection('footers')
+                ->addJs('assets/admin/js/lib/bootstrap-select/bootstrap-select.min.js');
+        $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_AFTER_TEMPLATE);
+        return;
+    }
+    
+    public function next2Action(){
+        $this->assets->collection('footers')
+                ->addJs('assets/admin/js/lib/bootstrap-select/bootstrap-select.min.js');
         $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_AFTER_TEMPLATE);
         return;
     }

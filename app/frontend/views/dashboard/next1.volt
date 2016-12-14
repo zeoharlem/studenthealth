@@ -5,36 +5,11 @@
 {% block content %}
 
 				<div class="col-lg-8 col-lg-push-3 col-md-12">
-					<form class="box-typical">
-						<input type="text" class="write-something" placeholder="Write Something..."/>
-						<div class="box-typical-footer">
-							<div class="tbl">
-								<div class="tbl-row">
-									<div class="tbl-cell">
-										<button type="button" class="btn-icon">
-											<i class="font-icon font-icon-earth"></i>
-										</button>
-										<button type="button" class="btn-icon">
-											<i class="font-icon font-icon-picture"></i>
-										</button>
-										<button type="button" class="btn-icon">
-											<i class="font-icon font-icon-calend"></i>
-										</button>
-										<button type="button" class="btn-icon">
-											<i class="font-icon font-icon-video-fill"></i>
-										</button>
-									</div>
-									<div class="tbl-cell tbl-cell-action">
-										<button type="submit" class="btn btn-rounded">Send</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</form><!--.box-typical-->
+					
 
 					<section class="card">
                                             <div class="card-block">
-                                                <form>
+                                                <form method="post">
                                                     <h5 class="with-border m-t-lg">PAGE 2</h5>
                                                     <div class="form-group row">
                                                         <label class="col-sm-6 form-control-label">Have you ever been admitted as an inpatient
@@ -122,10 +97,288 @@ in a hospital ?</label>
                                                         </div>
                                                         <div class="col-sm-2"></div>
                                                     </div>
-                                                </form><!--.box-typical-->
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Peptic Ulcer Disease</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Sickle Cell Disease</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Allergies</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Diabetes Mellitus</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Hypertension</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Seizures/Convulsions</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Mental Illness</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Others not specified</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">If the answer to any of the above is Yes, please give details with dates</label>
+                                                        <div class="col-sm-4">
+                                                            <textarea class="form-control" placeholder="Type details of the illness"></textarea>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    
+                                                    <div class="form-group row">
+                                                        <div class="col-lg-6">
+                                                            <fieldset class="form-group">
+                                                                    <label class="form-label" for="exampleInputEmail1">Do you know your genotype?</label>
+                                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter your genotype">
+                                                            </fieldset>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <fieldset class="form-group">
+                                                                    <label class="form-label" for="exampleInputEmail1">Do you know your blood group?</label>
+                                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter your blood group">
+                                                            </fieldset>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <h4>Has any of your family members suffered from any of the following?</h4>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Tuberculosis</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Hypertension</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Seizures/Convulsions</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Diabetes Mellitus</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Mental illness</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Do you react to any drug(s) Yes/No</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <h4>Have you been immunized against the following?</h4>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Hepatitis B</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Yellow Fever</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">Tetanus</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                    <div class="form-group row">
+                                                        <label class="col-sm-6 form-control-label">C.S.M</label>
+                                                        <div class="col-sm-4">
+                                                            <div class="btn-group" data-toggle="buttons">
+                                                                    <label class="btn active">
+                                                                            <input type="radio" name="options" id="option1" autocomplete="off" checked> Yes
+                                                                    </label>
+                                                                    <label class="btn">
+                                                                            <input type="radio" name="options" id="option2" autocomplete="off"> No
+                                                                    </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2"></div>
+                                                    </div>
+                                                
                                             </div>
-                                            <button type="button" class="btn btn-inline btn-primary">NEXT PAGE</button>
-                                            <button type="reset" class="btn btn-inline btn-success">RESET</button>
+                                            <button type="reset" class="btn btn-inline btn-success">PREVIOUS</button>
+                                            <button type="submit" class="btn btn-inline btn-primary">NEXT PAGE</button>
+                                             </form><!--.box-typical-->
                                         </section>
 
 					

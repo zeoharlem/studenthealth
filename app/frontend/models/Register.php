@@ -21,6 +21,7 @@ class Register extends BaseModel{
         $this->role     = "user";
         $this->date_of_registration = new \Phalcon\Db\RawValue('NOW()');
         $this->codename = $this->getDI()->get('component')->helper->makeRandomInts(11);
+        $this->jambreg              = $this->getDI()->get('session')->get('jambregno');
     }
     
     public function validation(){
@@ -35,6 +36,12 @@ class Register extends BaseModel{
             'model'     => $this,
             'message'   => 'Email address already existed'
         )));
+        
+        $validation->add('jambregno', new Validator\Uniqueness(array(
+            'model'     => $this,
+            'message'   => 'Jamb Registration Number already existed'
+        )));
+        
         $this->password = $security->hash($this->password);
         return $this->validate($validation);
     }
