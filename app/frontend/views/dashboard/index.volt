@@ -1,81 +1,4 @@
-{% block head %}
-    {{ this.assets.outputCss('profile') }}
-{% endblock %}
-
 {% block content %}
-<div class="row">
-				<div class="col-lg-3 col-lg-pull-6 col-md-6 col-sm-6">
-					<section class="box-typical">
-						<div class="profile-card">
-							<div class="profile-card-photo">
-								<img src="img/photo-220-1.jpg" alt=""/>
-							</div>
-							<div class="profile-card-name">Sarah Sanchez</div>
-							<div class="profile-card-status">Company Founder</div>
-							<div class="profile-card-location">Greater Seattle Area</div>
-							<button type="button" class="btn btn-rounded">Follow</button>
-							<div class="btn-group">
-								<button type="button"
-										class="btn btn-rounded btn-primary-outline dropdown-toggle"
-										data-toggle="dropdown"
-										aria-haspopup="true"
-										aria-expanded="false">
-									Connect
-								</button>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
-									<a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
-									<a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
-									<a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
-									<a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
-								</div>
-							</div>
-						</div><!--.profile-card-->
-
-						<div class="profile-statistic tbl">
-							<div class="tbl-row">
-								<div class="tbl-cell">
-									<b>200</b>
-									Connections
-								</div>
-								<div class="tbl-cell">
-									<b>1.9M</b>
-									Followers
-								</div>
-							</div>
-						</div>
-
-						<ul class="profile-links-list">
-							<li class="nowrap">
-								<i class="font-icon font-icon-earth-bordered"></i>
-								<a href="#">example.com</a>
-							</li>
-							<li class="nowrap">
-								<i class="font-icon font-icon-fb-fill"></i>
-								<a href="#">facebook.com/example</a>
-							</li>
-							<li class="nowrap">
-								<i class="font-icon font-icon-vk-fill"></i>
-								<a href="#">vk.com/example</a>
-							</li>
-							<li class="nowrap">
-								<i class="font-icon font-icon-in-fill"></i>
-								<a href="#">linked.in/example</a>
-							</li>
-							<li class="nowrap">
-								<i class="font-icon font-icon-tw-fill"></i>
-								<a href="#">twitter.com/example</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<i class="font-icon font-icon-pdf-fill"></i>
-								<a href="#">Export page as PDF</a>
-							</li>
-						</ul>
-					</section><!--.box-typical-->
-
-					
-				</div><!--.col- -->
 
 				<div class="col-lg-8 col-lg-push-3 col-md-12">
 					<form class="box-typical">
@@ -413,27 +336,106 @@
                                                         </div>
                                                         <div class="col-lg-4">
                                                                 <fieldset class="form-group">
-                                                                        <label class="form-label" for="exampleInputEmail1">Gender</label>
+                                                                        <label class="form-label" for="exampleInputEmail1">State</label>
                                                                         
                                                                         <select class="bootstrap-select bootstrap-select-arrow">
-                                                                                <option>Male</option>
-                                                                                <option>Female</option>
+                                                                                <option value="Abuja FCT">Abuja FCT</option>
+                                                                                <option value="Abia">Abia</option>
+                                                                                <option value="Adamawa">Adamawa</option>
+                                                                                <option value="Akwa Ibom">Akwa Ibom</option>
+                                                                                <option value="Anambra">Anambra</option>
+                                                                                <option value="Bauchi">Bauchi</option>
+                                                                                <option value="Bayelsa">Bayelsa</option>
+                                                                                <option value="Benue">Benue</option>
+                                                                                <option value="Borno">Borno</option>
+                                                                                <option value="Cross River">Cross River</option>
+                                                                                <option value="Delta">Delta</option>
+                                                                                <option value="Ebonyi">Ebonyi</option>
+                                                                                <option value="Edo">Edo</option>
+                                                                                <option value="Ekiti">Ekiti</option>
+                                                                                <option value="Enugu">Enugu</option>
+                                                                                <option value="Gombe">Gombe</option>
+                                                                                <option value="Imo">Imo</option>
+                                                                                <option value="Jigawa">Jigawa</option>
+                                                                                <option value="Kaduna">Kaduna</option>
+                                                                                <option value="Kano">Kano</option>
+                                                                                <option value="Katsina">Katsina</option>
+                                                                                <option value="Kebbi">Kebbi</option>
+                                                                                <option value="Kogi">Kogi</option>
+                                                                                <option value="Kwara">Kwara</option>
+                                                                                <option value="Lagos">Lagos</option>
+                                                                                <option value="Nassarawa">Nassarawa</option>
+                                                                                <option value="Niger">Niger</option>
+                                                                                <option value="Ogun">Ogun</option>
+                                                                                <option value="Ondo">Ondo</option>
+                                                                                <option value="Osun">Osun</option>
+                                                                                <option value="Oyo">Oyo</option>
+                                                                                <option value="Plateau">Plateau</option>
+                                                                                <option value="Rivers">Rivers</option>
+                                                                                <option value="Sokoto">Sokoto</option>
+                                                                                <option value="Taraba">Taraba</option>
+                                                                                <option value="Yobe">Yobe</option>
+                                                                                <option value="Zamfara">Zamfara</option>
+                                                                       <option value="Outside Nigeria">Outside Nigeria</option>
                                                                                 
                                                                         </select>
                                                                 </fieldset>
                                                         </div>
                                                         <div class="col-lg-4">
                                                                 <fieldset class="form-group">
-                                                                        <label class="form-label" for="exampleInputEmail1">Marital Status</label>
+                                                                        <label class="form-label" for="exampleInputEmail1">Department</label>
                                                                             <select class="bootstrap-select bootstrap-select-arrow">
-                                                                                <option>Single</option>
-                                                                                <option>Married</option>
+                                                                                <option>Agronomy</option>
+                                                                                <option>Physics</option>
                                                                                 
                                                                         </select>
                                                                 </fieldset>
                                                         </div>
                                                     </div><!--.row-->
+                                                    
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                                <fieldset class="form-group">
+                                                                        <label class="form-label semibold" for="exampleInput">Faculty</label>
+                                                                        <select class="bootstrap-select bootstrap-select-arrow">
+                                                                            <option>Agriculture and Forestry</option>
+                                                                        </select>
+                                                                </fieldset>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                                <fieldset class="form-group">
+                                                                        <label class="form-label" for="exampleInputEmail1">Telephone Number</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Telephone Number">
+                                                                </fieldset>
+                                                        </div>
+                                                        
+                                                    </div><!--.row-->
+                                                    <h4>For Emergencies, Contact Persons Information</h4>
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                                <fieldset class="form-group">
+                                                                        <label class="form-label semibold" for="exampleInput">Name of Contact Person</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Contact Person's Name">
+                                                                </fieldset>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                                <fieldset class="form-group">
+                                                                        <label class="form-label" for="exampleInputEmail1">Address of Contact Person</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Contact Persons's address">
+                                                                </fieldset>
+                                                        </div>
+                                                        
+                                                    </div><!--.row-->
 
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                                <fieldset class="form-group">
+                                                                        <label class="form-label semibold" for="exampleInput">Telephone of Contact Person</label>
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Contact Person's Phone Number">
+                                                                </fieldset>
+                                                        </div>
+                                                        
+                                                    </div><!--.row-->
                                                 </form><!--.box-typical-->
                                             </div>
                                             <button type="button" class="btn btn-inline btn-primary">NEXT PAGE</button>

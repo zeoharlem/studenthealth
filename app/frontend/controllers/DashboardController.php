@@ -30,4 +30,9 @@ class DashboardController extends BaseController{
         $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_AFTER_TEMPLATE);
         return;
     }
+    
+    public function next1Action(){
+        $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_AFTER_TEMPLATE);
+        return;
+    }
 }
