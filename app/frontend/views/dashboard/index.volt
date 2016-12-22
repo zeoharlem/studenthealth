@@ -1,24 +1,24 @@
 {% block content %}
 
 				<div class="col-lg-8 col-lg-push-3 col-md-12">
-					
+					{{flash.output()}}
 
 					<section class="card">
                                             <div class="card-block">
-                                                <form method="post">
+                                                <form method="post" action="{{url('dashboard/index')}}">
                                                     <h5 class="with-border m-t-lg">PAGE 1</h5>
                                                     <div class="row">
                                                         <div class="col-lg-6">
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label semibold" for="exampleInput">Surname</label>
-                                                                        <input type="text" class="form-control" id="exampleInput" placeholder="Enter your surname">
+                                                                        <input type="text" class="form-control" id="exampleInput" name="surname" placeholder="Enter your surname">
                                                                         <small class="text-muted">We'll never share your email with anyone else.</small>
                                                                 </fieldset>
                                                         </div>
                                                         <div class="col-lg-6">
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label" for="exampleInputEmail1">Other Names</label>
-                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Type other names">
+                                                                        <input type="text" class="form-control" name="othernames" id="exampleInputEmail1" placeholder="Type other names">
                                                                 </fieldset>
                                                         </div>
                                                         
@@ -27,14 +27,14 @@
                                                         <div class="col-lg-4">
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label semibold" for="exampleInput">Date of Birth</label>
-                                                                        <input type="text" class="form-control" id="exampleInput" placeholder="Select Date of Birth">
+                                                                        <input type="text" class="form-control" name="date_of_birth" id="exampleInput" placeholder="Select Date of Birth">
                                                                         <small class="text-muted">We'll never share your email with anyone else.</small>
                                                                 </fieldset>
                                                         </div>
                                                         <div class="col-lg-4">
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label" for="exampleInputEmail1">Gender</label>
-                                                                            <select class="bootstrap-select bootstrap-select-arrow">
+                                                                            <select class="bootstrap-select bootstrap-select-arrow" name="gender">
                                                                                 <option>Male</option>
                                                                                 <option>Female</option>
                                                                                 
@@ -44,7 +44,7 @@
                                                         <div class="col-lg-4">
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label" for="exampleInputEmail1">Marital Status</label>
-                                                                            <select class="bootstrap-select bootstrap-select-arrow">
+                                                                            <select class="bootstrap-select bootstrap-select-arrow" name="marital_status">
                                                                                 <option>Single</option>
                                                                                 <option>Married</option>
                                                                                 
@@ -57,7 +57,7 @@
                                                         <div class="col-lg-4">
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label semibold" for="exampleInput">Nationality</label>
-                                                                        <select class="bootstrap-select bootstrap-select-arrow">
+                                                                        <select class="bootstrap-select bootstrap-select-arrow" name="nationality">
                                                                                 <option value="">Country...</option>
                                                                                 <option value="Afganistan">Afghanistan</option>
                                                                                 <option value="Albania">Albania</option>
@@ -313,7 +313,7 @@
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label" for="exampleInputEmail1">State</label>
                                                                         
-                                                                        <select class="bootstrap-select bootstrap-select-arrow">
+                                                                        <select class="bootstrap-select bootstrap-select-arrow" name="state">
                                                                                 <option value="Abuja FCT">Abuja FCT</option>
                                                                                 <option value="Abia">Abia</option>
                                                                                 <option value="Adamawa">Adamawa</option>
@@ -359,7 +359,7 @@
                                                         <div class="col-lg-4">
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label" for="exampleInputEmail1">Department</label>
-                                                                            <select class="bootstrap-select bootstrap-select-arrow">
+                                                                            <select class="bootstrap-select bootstrap-select-arrow" name="department">
                                                                                 <option>Agronomy</option>
                                                                                 <option>Physics</option>
                                                                                 
@@ -372,7 +372,7 @@
                                                         <div class="col-lg-6">
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label semibold" for="exampleInput">Faculty</label>
-                                                                        <select class="bootstrap-select bootstrap-select-arrow">
+                                                                        <select class="bootstrap-select bootstrap-select-arrow" name="faculty">
                                                                             <option>Agriculture and Forestry</option>
                                                                         </select>
                                                                 </fieldset>
@@ -380,7 +380,7 @@
                                                         <div class="col-lg-6">
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label" for="exampleInputEmail1">Telephone Number</label>
-                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Telephone Number">
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Telephone Number"  name="phone_number">
                                                                 </fieldset>
                                                         </div>
                                                         
@@ -390,13 +390,13 @@
                                                         <div class="col-lg-6">
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label semibold" for="exampleInput">Name of Contact Person</label>
-                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Contact Person's Name">
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Contact Person's Name" name="name_contact_person">
                                                                 </fieldset>
                                                         </div>
                                                         <div class="col-lg-6">
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label" for="exampleInputEmail1">Address of Contact Person</label>
-                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Contact Persons's address">
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Contact Persons's address" name="address_contact_person">
                                                                 </fieldset>
                                                         </div>
                                                         
@@ -406,12 +406,12 @@
                                                         <div class="col-lg-6">
                                                                 <fieldset class="form-group">
                                                                         <label class="form-label semibold" for="exampleInput">Telephone of Contact Person</label>
-                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Contact Person's Phone Number">
+                                                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Contact Person's Phone Number" name="phone_contact_person">
                                                                 </fieldset>
                                                         </div>
                                                         
                                                     </div><!--.row-->
-                                               
+                                                <input name="register_id" value="{{this.session.get('auth')['register_id']}}" type="hidden" />
                                             </div>
                                             <button type="submit" class="btn btn-inline btn-primary">NEXT PAGE</button>
                                             <button type="reset" class="btn btn-inline btn-success">RESET</button>

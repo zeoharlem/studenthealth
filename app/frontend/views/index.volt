@@ -58,7 +58,7 @@
                     <span class="icon-navicon"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/logo.png" data-dark-src="{{url('assets/main/img/logo_dark.png')}}" class="logo">
+                    <img src="assets/img/logo.png" data-dark-src="{{url('assets/main/img/logo_dark.png')}}" alt="University of Ibadan" class="logo">
                 </a>
             </div>
 
@@ -128,7 +128,7 @@
                         <ul class="list-unstyled company-info">
                             <li><i class="icon-map-marker"></i> 1375 Richmond Avenue<br>Minneapolis, MN 90017</li>
                             <li><i class="icon-phone3"></i> 1-800-666-666</li>
-                            <li><i class="icon-envelope"></i> <a href="mailto:contact@somecorporation.com">contact@somecorporation.com</a></li>
+                            <li><i class="icon-envelope"></i> <a href="mailto:contact@ui.edu">contact@ui.edu</a></li>
                             <li><i class="icon-alarm2"></i> Monday - Friday: <strong>8:00 am - 7:00 pm</strong><br>Saturday - Sunday: <strong>Closed</strong></li>
                         </ul>
                     </div>
@@ -145,7 +145,7 @@
                 <hr>
                 <div class="row"> 
                     <div class="col-sm-6">
-                        <p>Copyright &copy; 2014 by <a href="http://www.hubancreative.com" target="_blank">HubanCreative</a></p> 
+                        <p>Copyright &copy; 2016 by <a href="#" target="_blank">CreativeMeshKernel</a></p> 
                     </div>
                     <div class="col-sm-6 text-right">
                         <div class="social-links">

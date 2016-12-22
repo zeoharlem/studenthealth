@@ -144,7 +144,7 @@
                 <hr>
                 <div class="row"> 
                     <div class="col-sm-6">
-                        <p>Copyright &copy; 2014 by <a href="http://www.hubancreative.com" target="_blank">HubanCreative</a></p> 
+                        <p>Copyright &copy; 2014 by <a href="#" target="_blank">CreativeMeshKernel</a></p> 
                     </div>
                     <div class="col-sm-6 text-right">
                         <div class="social-links">
