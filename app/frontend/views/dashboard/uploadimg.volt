@@ -9,12 +9,12 @@
 
 					<section class="card">
                                             <div class="card-block">
-                                                <form method="post">
+                                                <form method="post" enctype="multipart/form-data">
                                                     <h5 class="with-border m-t-lg">PAGE 4</h5>
                                                     <div class="form-group row">
                                                         <label class="col-sm-4 form-control-label"><strong>Select Image(400 by 400)</strong></label>
                                                         <div class="col-sm-6">
-                                                            <input type="file" class="form-control"  />
+                                                            <input type="file" name="filename" class="form-control" />
                                                         </div>
                                                         <div class="col-sm-2"></div>
                                                     </div>
