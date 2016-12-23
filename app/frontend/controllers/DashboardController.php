@@ -18,7 +18,7 @@ class DashboardController extends BaseController{
         \Phalcon\Tag::appendTitle('Dashboard');
         $this->assets->collection('profile')
                 ->addCss('assets/admin/css/separate/vendor/slick.min.css')
-                ->addCss('assets/admin/css/separate/pages/profile.min.css')
+                ->addCss('assets/admin/css/separate/pages/profile-2.min.css')
                 ->addCss('assets/admin/css/separate/vendor/bootstrap-select/bootstrap-select.min.css');
     }
     
@@ -26,7 +26,7 @@ class DashboardController extends BaseController{
         if($this->request->isPost()){
             $student    = new \Multiple\Frontend\Models\Studentone();
             if($student->create($this->request->getPost())){
-                $this->response->redirect('next1?task='.
+                $this->response->redirect('dashboard/next1?task='.
                         $this->component->helper->makeRandomString(15));
                 $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
                 return;
@@ -46,7 +46,7 @@ class DashboardController extends BaseController{
         if($this->request->isPost()){
             $student    = new \Multiple\Frontend\Models\Studenttwo();
             if($student->create($this->request->getPost())){
-                $this->response->redirect('next2n?task='.
+                $this->response->redirect('dashboard/next2n?task='.
                         $this->component->helper->makeRandomString(15));
                 $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
                 return;
@@ -66,7 +66,7 @@ class DashboardController extends BaseController{
         if($this->request->isPost()){
             $student    = new \Multiple\Frontend\Models\Studentthree();
             if($student->create($this->request->getPost())){
-                $this->response->redirect('next2?task='.
+                $this->response->redirect('dashboard/next2?task='.
                         $this->component->helper->makeRandomString(15));
                 $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
                 return;

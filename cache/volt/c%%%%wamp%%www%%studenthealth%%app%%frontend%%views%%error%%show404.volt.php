@@ -20,7 +20,7 @@
 
         
 
-<body class="with-side-menu wet-aspalt-theme">
+<body class="wet-aspalt-theme">
     <header class="site-header">
 	    <div class="container-fluid">
 	
@@ -236,73 +236,10 @@
 	</header><!--.site-header-->
 
 	<div class="mobile-menu-left-overlay"></div>
-	<nav class="side-menu">
-	    <ul class="side-menu-list">
-	        <li class="grey with-sub">
-	            <span>
-	                <i class="font-icon font-icon-dashboard"></i>
-	                <span class="lbl">Dashboard</span>
-	            </span>
-	            <ul>
-	                <li><a href="index.html"><span class="lbl">Default</span><span class="label label-custom label-pill label-danger">new</span></a></li>
-	                <li><a href="dashboard-top-menu.html"><span class="lbl">Top menu</span></a></li>
-	                <li><a href="side-menu-compact-full.html"><span class="lbl">Compact menu</span></a></li>
-	                <li><a href="dashboard-addl-menu.html"><span class="lbl">Submenu</span></a></li>
-	                <li><a href="side-menu-avatar.html"><span class="lbl">Menu with avatar</span></a></li>
-	                <li><a href="side-menu-avatar.html"><span class="lbl">Compact menu with avatar</span></a></li>
-	                <li><a href="dark-menu.html"><span class="lbl">Dark menu</span></a></li>
-	                <li><a href="dark-menu-blue.html"><span class="lbl">Blue dark menu</span></a></li>
-	                <li><a href="dark-menu-green.html"><span class="lbl">Green dark menu</span></a></li>
-	                <li><a href="dark-menu-green-compact.html"><span class="lbl">Green compact dark menu</span></a></li>
-	                <li><a href="dark-menu-ultramarine.html"><span class="lbl">Ultramarine dark menu</span></a></li>
-	                <li><a href="asphalt-menu.html"><span class="lbl">Asphalt top menu</span></a></li>
-	                <li><a href="side-menu-big-icon.html"><span class="lbl">Big menu</span></a></li>
-	            </ul>
-	        </li>
-	        
-	    </ul>
 	
-	    <section>
-	        <header class="side-menu-title">Tags</header>
-	        <ul class="side-menu-list">
-	            <li>
-	                <a href="#">
-	                    <i class="tag-color green"></i>
-	                    <span class="lbl">Website</span>
-	                </a>
-	            </li>
-	            <li>
-	                <a href="#">
-	                    <i class="tag-color grey-blue"></i>
-	                    <span class="lbl">Bugs/Errors</span>
-	                </a>
-	            </li>
-	            <li>
-	                <a href="#">
-	                    <i class="tag-color red"></i>
-	                    <span class="lbl">General Problem</span>
-	                </a>
-	            </li>
-	            <li>
-	                <a href="#">
-	                    <i class="tag-color pink"></i>
-	                    <span class="lbl">Questions</span>
-	                </a>
-	            </li>
-	            <li>
-	                <a href="#">
-	                    <i class="tag-color orange"></i>
-	                    <span class="lbl">Ideas</span>
-	                </a>
-	            </li>
-	        </ul>
-	    </section>
-	</nav><!--.side-menu-->
     	
     <!-- Start right content -->
         <div class="page-content">
-		<div class="container-fluid">
-			<!-- ============================================================== -->
                         
 <!-- ============================================================= HEADER : END ============================================================= -->
 <section id="cart-page">
@@ -313,14 +250,6 @@
 </div>
 </section>
 
-            <footer>
-                CreativeMeshKernel &copy; 2016
-                <div class="footer-links pull-right">
-                	<a href="#">About</a><a href="#">Support</a><a href="#">Terms of Service</a><a href="#">Legal</a><a href="#">Help</a><a href="#">Contact Us</a>
-                </div>
-            </footer>
-            <!-- Footer End -->			
-            </div><!--.container-fluid-->
 	</div><!--.page-content-->
 
 <?= $this->assets->outputJs('footers') ?>
