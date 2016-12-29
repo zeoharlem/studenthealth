@@ -3,14 +3,11 @@
 {% endblock %}
 
 {% block content %}
-
-				<div class="col-lg-8 col-lg-push-3 col-md-12">
-					{{flash.output()}}
-
-					<section class="card">
-                                            <div class="card-block">
+ <div role="tabpanel" class="tab-pane active" id="tabs-3-tab-1">
+        
+            <section class="box-typical box-typical-padding">
                                                 <form  method="post">
-                                                    <h5 class="with-border m-t-lg">PAGE 3</h5>
+                                                    <h5 class="with-border m-t-lg">PAGE 4</h5>
                                                     <div class="form-group row">
                                                         <label class="col-sm-6 form-control-label">Do you currently use tobacco products such as cigarettes, snuff etc?
 in a hospital ?</label>
@@ -98,9 +95,9 @@ exercises such as jogging, tennis, golf, gardening or walking for exercise?</lab
                                                                     </label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-sm-2">
                                                             <select class="bootstrap-select bootstrap-select-arrow" name="fruits_nof">
-                                                                <option>Number of Times</option>
+                                                                <option>No. of Times</option>
                                                                 <option>1</option>
                                                                 <option>2</option>
                                                             </select>
@@ -116,9 +113,9 @@ exercises such as jogging, tennis, golf, gardening or walking for exercise?</lab
                                                                     </label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-sm-2">
                                                             <select class="bootstrap-select bootstrap-select-arrow" name="vegetable_nof">
-                                                                <option>Number of Times</option>
+                                                                <option>No. of Times</option>
                                                                 <option>1</option>
                                                                 <option>2</option>
                                                             </select>
@@ -134,9 +131,9 @@ exercises such as jogging, tennis, golf, gardening or walking for exercise?</lab
                                                                     </label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-sm-2">
                                                             <select class="bootstrap-select bootstrap-select-arrow" name="cooked_vegetables_nof">
-                                                                <option>Number of Times</option>
+                                                                <option>No. of Times</option>
                                                                 <option>1</option>
                                                                 <option>2</option>
                                                             </select>
@@ -152,9 +149,9 @@ exercises such as jogging, tennis, golf, gardening or walking for exercise?</lab
                                                                     </label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-sm-2">
                                                             <select class="bootstrap-select bootstrap-select-arrow" name="pastries_nof">
-                                                                <option>Number of Times</option>
+                                                                <option>No. of Times</option>
                                                                 <option>1</option>
                                                                 <option>2</option>
                                                             </select>
@@ -170,9 +167,9 @@ exercises such as jogging, tennis, golf, gardening or walking for exercise?</lab
                                                                     </label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-sm-2">
                                                             <select class="bootstrap-select bootstrap-select-arrow" name="fried_food_nof">
-                                                            <option>Number of Times</option>
+                                                            <option>No. of Times</option>
                                                                 <option>1</option>
                                                                 <option>2</option>
                                                             </select>
@@ -188,9 +185,9 @@ exercises such as jogging, tennis, golf, gardening or walking for exercise?</lab
                                                                     </label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-sm-2">
                                                             <select class="bootstrap-select bootstrap-select-arrow" name="soft_drink_nof">
-                                                            <option>Number of Times</option>
+                                                            <option>No. of Times</option>
                                                                 <option>1</option>
                                                                 <option>2</option>
                                                             </select>
@@ -206,26 +203,34 @@ exercises such as jogging, tennis, golf, gardening or walking for exercise?</lab
                                                                     </label>
                                                             </div>
                                                         </div>
-                                                        <div class="col-sm-3">
+                                                        <div class="col-sm-2">
                                                             <select class="bootstrap-select bootstrap-select-arrow" name="red_meat_nof">
-                                                                <option>Number of Times</option>
+                                                                <option>No. of Times</option>
                                                                 <option>1</option>
                                                                 <option>2</option>
                                                             </select>
                                                         </div>
                                                     </div>
                                                     
-                                                
+                                                <div class="box-typical-footer">
+                                                            <div class="tbl">
+                                                                    <div class="tbl-row">
+                                                                            <div class="tbl-cell">
+                                                                                    <a href="{{url('dashboard/')}}" type="submit" id="stage-1" class="btn btn-rounded btn-warning">Previous</a>
+                                                                            </div>
+                                                                            <div class="tbl-cell tbl-cell-action">
+                                                                                    <button type="submit" id="stage-1" class="btn btn-rounded">Next Story</button>
+                                                                            </div>
+                                                                    </div>
+                                                            </div>
+                                                    </div>
                                             </div>
-                                            <button type="reset" class="btn btn-inline btn-success">PREVIOUS</button>
-                                            <button type="submit" class="btn btn-inline btn-primary">SUBMIT</button>
-                                             </form><!--.box-typical-->
+                                            
                                         </section>
+                                             </form><!--.box-typical-->
 
 					
 				</div><!--.col- -->
 
-				
-			</div><!--.row-->
 
 {% endblock %}

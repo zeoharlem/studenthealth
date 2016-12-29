@@ -16,7 +16,7 @@ a:5:{i:0;s:559:"
 
         <?= $this->assets->outputCss('headers') ?>
             
-        ";s:4:"head";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:1:" ";s:4:"file";s:64:"C:\wamp\www\studenthealth\app/frontend/views/templates/base.volt";s:4:"line";i:19;}}i:1;s:14128:"
+        ";s:4:"head";a:1:{i:0;a:4:{s:4:"type";i:357;s:5:"value";s:1:" ";s:4:"file";s:64:"C:\wamp\www\studenthealth\app/frontend/views/templates/base.volt";s:4:"line";i:19;}}i:1;s:12691:"
         
 
 <body class="wet-aspalt-theme">
@@ -204,29 +204,7 @@ a:5:{i:0;s:559:"
 	                    <div class="site-header-collapsed-in">
 	                        
 	                        
-	                        <div class="dropdown">
-	                            <button class="btn btn-rounded dropdown-toggle" id="dd-header-add" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                Add
-	                            </button>
-	                            <div class="dropdown-menu" aria-labelledby="dd-header-add">
-	                                <a class="dropdown-item" href="#">Quant and Verbal</a>
-	                                <a class="dropdown-item" href="#">Real Gmat Test</a>
-	                                <a class="dropdown-item" href="#">Prep Official App</a>
-	                                <a class="dropdown-item" href="#">CATprer Test</a>
-	                                <a class="dropdown-item" href="#">Third Party Test</a>
-	                            </div>
-	                        </div>
 	                        
-	                        
-	                        <div class="site-header-search-container">
-	                            <form class="site-header-search closed">
-	                                <input type="text" placeholder="Search"/>
-	                                <button type="submit">
-	                                    <span class="font-icon-search"></span>
-	                                </button>
-	                                <div class="overlay"></div>
-	                            </form>
-	                        </div>
 	                    </div><!--.site-header-collapsed-in-->
 	                </div><!--.site-header-collapsed-->
 	            </div><!--site-header-content-in-->

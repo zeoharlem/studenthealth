@@ -205,29 +205,7 @@
 	                    <div class="site-header-collapsed-in">
 	                        
 	                        
-	                        <div class="dropdown">
-	                            <button class="btn btn-rounded dropdown-toggle" id="dd-header-add" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                Add
-	                            </button>
-	                            <div class="dropdown-menu" aria-labelledby="dd-header-add">
-	                                <a class="dropdown-item" href="#">Quant and Verbal</a>
-	                                <a class="dropdown-item" href="#">Real Gmat Test</a>
-	                                <a class="dropdown-item" href="#">Prep Official App</a>
-	                                <a class="dropdown-item" href="#">CATprer Test</a>
-	                                <a class="dropdown-item" href="#">Third Party Test</a>
-	                            </div>
-	                        </div>
 	                        
-	                        
-	                        <div class="site-header-search-container">
-	                            <form class="site-header-search closed">
-	                                <input type="text" placeholder="Search"/>
-	                                <button type="submit">
-	                                    <span class="font-icon-search"></span>
-	                                </button>
-	                                <div class="overlay"></div>
-	                            </form>
-	                        </div>
 	                    </div><!--.site-header-collapsed-in-->
 	                </div><!--.site-header-collapsed-->
 	            </div><!--site-header-content-in-->

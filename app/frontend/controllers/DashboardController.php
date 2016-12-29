@@ -13,6 +13,8 @@ namespace Multiple\Frontend\Controllers;
 
 class DashboardController extends BaseController{
     
+    private $_currentStage;
+    
     public function initialize(){
         parent::initialize();
         \Phalcon\Tag::appendTitle('Dashboard');
@@ -20,6 +22,47 @@ class DashboardController extends BaseController{
                 ->addCss('assets/admin/css/separate/vendor/slick.min.css')
                 ->addCss('assets/admin/css/separate/pages/profile-2.min.css')
                 ->addCss('assets/admin/css/separate/vendor/bootstrap-select/bootstrap-select.min.css');
+        $this->assets->collection('footers')->addJs('assets/admin/js/customs.js');
+    }
+    
+    public function beforeExecuteRoute(\Phalcon\Mvc\Dispatcher $dispatcher){
+        $action     = $dispatcher->getActionName();
+        $controller = $dispatcher->getControllerName();
+        $r  = $this->session->get('auth')['register_id'];
+        
+        $this->_currentStage = \Multiple\Frontend\Models\
+                    Studentone::findFirstByRegister_id($r);
+        
+        //var_dump($this->_currentStage); exit;
+        if($action == 'index' && $this->_currentStage){
+            $dispatcher->forward(array(
+                "action"        => "next1",
+                "controller"    => "dashboard",
+                "params"        => array('active','disabled')
+            ));
+        }
+        elseif($action == 'next1' && $this->_currentStage->studenttwo){
+            $dispatcher->forward(array(
+                "action"        => "next2n",
+                "controller"    => "dashboard",
+                "params"        => array('active','disabled')
+            ));
+        }
+        elseif($action == 'next2n' && $this->_currentStage->studentthree){
+            $dispatcher->forward(array(
+                "action"        => "next2",
+                "controller"    => "dashboard",
+                "params"        => array('active','disabled')
+            ));
+        }
+        elseif($action == 'next2' && $this->_currentStage->studentfour){
+            $dispatcher->forward(array(
+                "action"    => "dash",
+                "controller"=> "dashboard"
+            ));
+        }
+        $this->view->setVar('currUri', $this->router->getRewriteUri());
+        $this->view->setVar('dataStage', $this->_currentStage);
     }
     
     public function indexAction(){
@@ -36,8 +79,15 @@ class DashboardController extends BaseController{
                 $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
             }
         }
+        
         $this->assets->collection('footers')->addJs(
                 'assets/admin/js/lib/bootstrap-select/bootstrap-select.min.js');
+        $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_AFTER_TEMPLATE);
+        return;
+    }
+    
+    public function dashAction(){
+        
         $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_AFTER_TEMPLATE);
         return;
     }

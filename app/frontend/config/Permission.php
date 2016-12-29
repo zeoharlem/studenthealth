@@ -34,6 +34,7 @@ class Permission extends \Phalcon\Mvc\User\Plugin{
     
     protected $_userResources = array(
         'dashboard'     => ['*'],
+        'form'          => ['*'],
         'order'         => ['*'],
         'agents'        => ['*'],
         'password'      => ['*'],

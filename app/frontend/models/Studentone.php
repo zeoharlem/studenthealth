@@ -15,5 +15,55 @@ namespace Multiple\Frontend\Models;
  */
 class Studentone extends BaseModel{
     //put your code here
+    public function initialize(){
+        $this->belongsTo(
+                'register_id',
+                "Multiple\\Frontend\\Models\\Register",
+                'register_id',
+                array('reusable' => true));
+        
+        $this->belongsTo(
+                'register_id',
+                "Multiple\\Frontend\\Models\\Studenttwo",
+                'register_id',
+                array('reusable' => true));
+        
+        $this->belongsTo(
+                'register_id',
+                "Multiple\\Frontend\\Models\\Studentthree",
+                'register_id',
+                array('reusable' => true));
+        
+        $this->belongsTo(
+                'register_id',
+                "Multiple\\Frontend\\Models\\Studentfour",
+                'register_id',
+                array('reusable' => true));
+        
+        $this->belongsTo(
+                'register_id',
+                "Multiple\\Frontend\\Models\\Imagecaption",
+                'register_id',
+                array('reusable' => true));
+    }
     
+    public function getRegister(){
+        return $this->getRelated('Multiple\Frontend\Models\Register');
+    }
+    
+    public function getStudenttwo(){
+        return $this->getRelated('Multiple\Frontend\Models\Studenttwo');
+    }
+    
+    public function getStudentthree(){
+        return $this->getRelated('Multiple\Frontend\Models\Studentthree');
+    }
+    
+    public function getStudentfour(){
+        return $this->getRelated('Multiple\Frontend\Models\Studentfour');
+    }
+    
+    public function getImagecaption(){
+        return $this->getRelated('Multiple\Frontend\Models\Imagecaption');
+    }
 }

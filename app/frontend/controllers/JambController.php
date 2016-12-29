@@ -15,6 +15,12 @@ namespace Multiple\Frontend\Controllers;
  */
 class JambController extends BaseController{
     //put your code here
+    public function initialize(){
+        parent::initialize();
+        $response   = new \Phalcon\Http\Response();
+        header("Access-Control-Allow-Origin:*");
+    }
+    
     public function indexAction(){
         $response   = new \Phalcon\Http\Response();
         if($this->request->isPost() && $this->request->isAjax()){
@@ -26,15 +32,19 @@ class JambController extends BaseController{
                 $response->setJsonContent(array('status' => true, 
                     'data' => $jambNumber->jamb_registration_number));
                 $this->session->set('jambregno', $this->request->getPost('textForm'));
-                $response->send(); exit();
+                $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
+                $response->send();
+                return;
             }
             else{
                 $response->setJsonContent(array('status' => false));
-                $response->send(); exit();
+                $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
+                $response->send();
+                return; exit();
             }
         }
         $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
-        $this->response->redirect('index/?trafic=false&task=redirect');
+        $this->response->redirect('index/');
         return;
     }
 }

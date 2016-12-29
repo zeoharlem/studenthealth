@@ -3,12 +3,9 @@
 {% endblock %}
 
 {% block content %}
-
-				<div class="col-lg-8 col-lg-push-3 col-md-12">
-					{{flash.output()}}
-
-					<section class="card">
-                                            <div class="card-block">
+<div role="tabpanel" class="tab-pane active" id="tabs-3-tab-1">
+        
+            <section class="box-typical box-typical-padding">
                                                 <form method="post">
                                                     <h5 class="with-border m-t-lg">PAGE 2</h5>
                                                     <div class="form-group row">
@@ -176,17 +173,22 @@
                                                         </div>
                                                         <div class="col-sm-2"></div>
                                                     </div>
-                                                
+                                                <div class="box-typical-footer">
+                                                            <div class="tbl">
+                                                                    <div class="tbl-row">
+                                                                            <div class="tbl-cell">
+                                                                                    <a href="{{url('dashboard/')}}" type="submit" id="stage-1" class="btn btn-rounded btn-warning">Previous</a>
+                                                                            </div>
+                                                                            <div class="tbl-cell tbl-cell-action">
+                                                                                    <button type="submit" id="stage-1" class="btn btn-rounded">Next Story</button>
+                                                                            </div>
+                                                                    </div>
+                                                            </div>
+                                                    </div>
                                             </div>
-                                            <button type="reset" class="btn btn-inline btn-success">PREVIOUS</button>
-                                            <button type="submit" class="btn btn-inline btn-primary">NEXT PAGE</button>
+                                            
                                              </form><!--.box-typical-->
                                         </section>
-
-					
-				</div><!--.col- -->
-
-				
 			</div><!--.row-->
 
 {% endblock %}

@@ -23,5 +23,5 @@ $(document).ready(function(){
         else{
             $("input[name='jambnumber']").css('border','1px solid #f00');
         }
-    })
+    });
 })

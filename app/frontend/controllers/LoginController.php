@@ -27,7 +27,7 @@ class LoginController extends BaseController{
                     $this->__registerSession($register);
                     $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
                     $this->flash->success('You are welcome! '.$register->firstname);
-                    $this->response->redirect('dashboard/?token='.uniqid());
+                    $this->response->redirect('dashboard/index?token='.uniqid());
                     return;
                 }
             }
@@ -39,7 +39,7 @@ class LoginController extends BaseController{
             }
         }
         $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
-        $this->response->redirect('index/?task=redirect&'.uniqid());
+        $this->response->redirect('index/index?task=redirect&'.uniqid());
         return;
     }
     
@@ -47,7 +47,7 @@ class LoginController extends BaseController{
         $this->session->remove('auth');
         $this->session->remove('cart_item');
         $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
-        $this->response->redirect('checkout/process?token=' . uniqid());
+        $this->response->redirect('index/index?token=' . uniqid());
     }
     
     private function __registerSession(Register $register){
