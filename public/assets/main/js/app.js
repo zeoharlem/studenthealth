@@ -12,7 +12,7 @@ $(document).ready(function(){
         
         if(textForm.length > 3 || textForm != ''){
             $(this).text('Please Wait...');
-            $.post('http://localhost/studenthealth/jamb',{textForm:textForm}, function(data,textRes,xhr){
+            $.post('http://localhost/studenthealth/jamb/',{textForm:textForm}, function(data,textRes,xhr){
                 var strinfJSON  = $.parseJSON(JSON.stringify(data));
                 if(strinfJSON.status == true && strinfJSON.data.length > 4){
                     $('#jamb_form').remove();
