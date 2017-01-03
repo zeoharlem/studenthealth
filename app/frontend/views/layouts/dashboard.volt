@@ -5,100 +5,64 @@
 {% endblock %}
 
 {% block content %}
-<div class="profile-header-photo">
-			<div class="profile-header-photo-in">
-				<div class="tbl-cell">
-					<div class="info-block">
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-xl-9 col-xl-offset-3 col-lg-8 col-lg-offset-4 col-md-offset-0">
-									<div class="tbl info-tbl">
-										<div class="tbl-row">
-											<div class="tbl-cell">
-												<p class="title">Dan Counsell</p>
-												<p>Company Founder</p>
-											</div>
-											<div class="tbl-cell tbl-cell-stat">
-												<a href="{{url('dashboard/')}}" class="btn btn-primary">DASHBOARD</a>
-											</div>
-											<div class="tbl-cell tbl-cell-stat">
-												<a href="#" class="btn btn-danger">EDIT STAGES</a>
-											</div>
-											<div class="tbl-cell tbl-cell-stat">
-												<a href="#" class="btn btn-success">STATUS VIEW</a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<button type="button" class="change-cover">
-				<i class="font-icon font-icon-picture-double"></i>
-				Change cover
-				<input type="file"/>
-			</button>
-		</div><!--.profile-header-photo-->
+<h1 class="page-title"> <strong>DASHBOARD VIEW</strong>
+    <small></small>
+</h1>
 
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xl-3 col-lg-4">
-					<aside class="profile-side">
-						<section class="box-typical profile-side-user">
-							<button type="button" class="avatar-preview avatar-preview-128">
-								<img src="{{url('assets/main/uploads/'~dataStage.imagecaption.image_url)}}" alt=""/>
-								<span class="update">
-									<i class="font-icon font-icon-picture-double"></i>
-									Update photo
-								</span>
-								<input type="file"/>
-							</button>
-							
-							<div class="btn-group">
-								
-							</div>
-							<div class="bottom-txt">{{session.get('auth')['fullname'] | capitalize}}</div>
-						</section>
+<div class="portlet light portlet-fit bordered">
+<div class="portlet-title">
+    <div class="caption">
+        <i class="icon-microphone font-dark hide"></i>
+        <span class="caption-subject font-dark"> Welcome</span>
+        
+    </div>
+    
+</div>
+<div class="portlet-body">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="mt-widget-2">
+                <div class="mt-head" style="background-image: url(../assets/admin/pages/img/background/32.jpg);">
+                    <div class="mt-head-label">
+                        <button type="button" class="btn btn-success">{{session.get('auth')['firstname']}}</button>
+                    </div>
+                    <div class="mt-head-user">
+                        <div class="mt-head-user-img">
+                            <img src="{{url('assets/main/uploads/'~dataImage.image_url)}}"> </div>
+                        <div class="mt-head-user-info">
+                            <span class="mt-user-name">{{session.get('auth')['email']}}</span>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-body">
+                    <h3 class="mt-body-title"> {{session.get('auth')['fullname'] | capitalize}} </h3>
+                    <p class="mt-body-description"> {{dataImage.register.address}} </p>
+                    <ul class="mt-body-stats">
+                        <li class="font-yellow">
+                            <i class="fa fa-phone"></i> {{session.get('auth')['phonenumber']}}</li>
+                        
+                        <li class="font-red">
+                            <i class="  icon-bubbles"></i> {{session.get('jambregno')}}</li>
+                    </ul>
+                    <div class="mt-body-actions">
+                        <div class="btn-group btn-group btn-group-justified">
+                            <a href="{{url('dashboard/edit')}}" class="btn btn-primary">
+                                <i class="icon-pencil"></i> Edit Profile</a>
+                            <a href="{{url('dashboard/change')}}" class="btn btn-warning">
+                                <i class="fa fa-database"></i> Change Password </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            {% if dataImage.studentone %}
+            <strong>Instructions</strong><br/>
+            {% endif %}
+        </div>
+    </div>
+</div>
+</div>
 
-						
-
-						<section class="box-typical">
-							<header class="box-typical-header-sm bordered">Info</header>
-							<div class="box-typical-inner">
-								<p class="line-with-icon">
-									<i class="font-icon font-icon-pin-2"></i>
-									{{dataStage.register.email}}
-								</p>
-								<p class="line-with-icon">
-									<i class="font-icon font-icon-phone"></i>
-									{{dataStage.register.phonenumber}}
-								</p>
-								<p class="line-with-icon">
-									<i class="font-icon font-icon-case-3"></i>
-									{{dataStage.register.address}}
-								</p>
-								<p class="line-with-icon">
-									<i class="font-icon font-icon-learn"></i>
-									{{dataStage.department}}
-								</p>
-								
-							</div>
-						</section>
-
-					</aside><!--.profile-side-->
-				</div>
-
-				<div class="col-xl-9 col-lg-8">
-					<section class="tabs-section">
-						{{ partial("partials/headerview") }}
-
-						<div class="tab-content no-styled profile-tabs">
-                                                    {{this.getContent()}}
-						</div><!--.tab-content-->
-					</section><!--.tabs-section-->
-				</div>
-			</div><!--.row-->
-		</div><!--.container-fluid-->
 {% endblock %}

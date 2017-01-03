@@ -13,222 +13,223 @@
         <meta name="robots" content="all">
 
         <?= $this->tag->gettitle() ?>
-
+        
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
         <?= $this->assets->outputCss('headers') ?>
             
         
 
         
 
-<body class="wet-aspalt-theme">
-    <header class="site-header">
-	    <div class="container-fluid">
-	
-	        <a href="#" class="site-logo">
-	            <img class="hidden-md-down" src="<?= $this->url->get('img/logo-2.png') ?>" alt="">
-	            <img class="hidden-lg-up" src="<?= $this->url->get('img/logo-2-mob.png') ?>" alt="">
-	        </a>
-	
-	        <button id="show-hide-sidebar-toggle" class="show-hide-sidebar">
-	            <span>toggle menu</span>
-	        </button>
-	
-	        <button class="hamburger hamburger--htla">
-	            <span>toggle menu</span>
-	        </button>
-	        <div class="site-header-content">
-	            <div class="site-header-content-in">
-	                <div class="site-header-shown">
-	                    <div class="dropdown dropdown-notification notif">
-	                        <a href="#"
-	                           class="header-alarm dropdown-toggle active"
-	                           id="dd-notification"
-	                           data-toggle="dropdown"
-	                           aria-haspopup="true"
-	                           aria-expanded="false">
-	                            <i class="font-icon-alarm"></i>
-	                        </a>
-	                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-notif" aria-labelledby="dd-notification">
-	                            <div class="dropdown-menu-notif-header">
-	                                Notifications
-	                                <span class="label label-pill label-danger">4</span>
-	                            </div>
-	                            <div class="dropdown-menu-notif-list">
-	                                <div class="dropdown-menu-notif-item">
-	                                    <div class="photo">
-	                                        <img src="img/photo-64-1.jpg" alt="">
-	                                    </div>
-	                                    <div class="dot"></div>
-	                                    <a href="#">Morgan</a> was bothering about something
-	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
-	                                </div>
-	                                <div class="dropdown-menu-notif-item">
-	                                    <div class="photo">
-	                                        <img src="img/photo-64-2.jpg" alt="">
-	                                    </div>
-	                                    <div class="dot"></div>
-	                                    <a href="#">Lioneli</a> had commented on this <a href="#">Super Important Thing</a>
-	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
-	                                </div>
-	                                <div class="dropdown-menu-notif-item">
-	                                    <div class="photo">
-	                                        <img src="img/photo-64-3.jpg" alt="">
-	                                    </div>
-	                                    <div class="dot"></div>
-	                                    <a href="#">Xavier</a> had commented on the <a href="#">Movie title</a>
-	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
-	                                </div>
-	                                <div class="dropdown-menu-notif-item">
-	                                    <div class="photo">
-	                                        <img src="img/photo-64-4.jpg" alt="">
-	                                    </div>
-	                                    <a href="#">Lionely</a> wants to go to <a href="#">Cinema</a> with you to see <a href="#">This Movie</a>
-	                                    <div class="color-blue-grey-lighter">7 hours ago</div>
-	                                </div>
-	                            </div>
-	                            <div class="dropdown-menu-notif-more">
-	                                <a href="#">See more</a>
-	                            </div>
-	                        </div>
-	                    </div>
-	
-	                    <div class="dropdown dropdown-notification messages">
-	                        <a href="#"
-	                           class="header-alarm dropdown-toggle active"
-	                           id="dd-messages"
-	                           data-toggle="dropdown"
-	                           aria-haspopup="true"
-	                           aria-expanded="false">
-	                            <i class="font-icon-mail"></i>
-	                        </a>
-	                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-messages" aria-labelledby="dd-messages">
-	                            <div class="dropdown-menu-messages-header">
-	                                <ul class="nav" role="tablist">
-	                                    <li class="nav-item">
-	                                        <a class="nav-link active"
-	                                           data-toggle="tab"
-	                                           href="#tab-incoming"
-	                                           role="tab">
-	                                            Inbox
-	                                            <span class="label label-pill label-danger">8</span>
-	                                        </a>
-	                                    </li>
-	                                    <li class="nav-item">
-	                                        <a class="nav-link"
-	                                           data-toggle="tab"
-	                                           href="#tab-outgoing"
-	                                           role="tab">Outbox</a>
-	                                    </li>
-	                                </ul>
-	                                <!--<button type="button" class="create">
-	                                    <i class="font-icon font-icon-pen-square"></i>
-	                                </button>-->
-	                            </div>
-	                            <div class="tab-content">
-	                                <div class="tab-pane active" id="tab-incoming" role="tabpanel">
-	                                    <div class="dropdown-menu-messages-list">
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
-	                                            <span class="mess-item-name">Tim Collins</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
-	                                        </a>
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
-	                                            <span class="mess-item-name">Christian Burton</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something.</span>
-	                                        </a>
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
-	                                            <span class="mess-item-name">Tim Collins</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
-	                                        </a>
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
-	                                            <span class="mess-item-name">Christian Burton</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something...</span>
-	                                        </a>
-	                                    </div>
-	                                </div>
-	                                <div class="tab-pane" id="tab-outgoing" role="tabpanel">
-	                                    <div class="dropdown-menu-messages-list">
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
-	                                            <span class="mess-item-name">Christian Burton</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something...</span>
-	                                        </a>
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
-	                                            <span class="mess-item-name">Tim Collins</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something! Morgan was bothering about something.</span>
-	                                        </a>
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/avatar-2-64.png" alt=""></span>
-	                                            <span class="mess-item-name">Christian Burtons</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
-	                                        </a>
-	                                        <a href="#" class="mess-item">
-	                                            <span class="avatar-preview avatar-preview-32"><img src="img/photo-64-2.jpg" alt=""></span>
-	                                            <span class="mess-item-name">Tim Collins</span>
-	                                            <span class="mess-item-txt">Morgan was bothering about something!</span>
-	                                        </a>
-	                                    </div>
-	                                </div>
-	                            </div>
-	                            <div class="dropdown-menu-notif-more">
-	                                <a href="#">See more</a>
-	                            </div>
-	                        </div>
-	                    </div>
-	
-	                    
-	
-	                    <div class="dropdown user-menu">
-	                        <button class="dropdown-toggle" id="dd-user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                            <img src="img/avatar-2-64.png" alt="">
-	                        </button>
-	                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dd-user-menu">
-	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-user"></span>Profile</a>
-	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-cog"></span>Settings</a>
-	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-question-sign"></span>Help</a>
-	                            <div class="dropdown-divider"></div>
-	                            <a class="dropdown-item" href="#"><span class="font-icon glyphicon glyphicon-log-out"></span>Logout</a>
-	                        </div>
-	                    </div>
-	
-	                    <button type="button" class="burger-right">
-	                        <i class="font-icon-menu-addl"></i>
-	                    </button>
-	                </div><!--.site-header-shown-->
-	
-	                <div class="mobile-menu-right-overlay"></div>
-	                <div class="site-header-collapsed">
-	                    <div class="site-header-collapsed-in">
-	                        
-	                        
-	                        
-	                    </div><!--.site-header-collapsed-in-->
-	                </div><!--.site-header-collapsed-->
-	            </div><!--site-header-content-in-->
-	        </div><!--.site-header-content-->
-	    </div><!--.container-fluid-->
-	</header><!--.site-header-->
+<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white page-md">
+        <div class="page-wrapper">
+            <!-- BEGIN HEADER -->
+            <div class="page-header navbar navbar-fixed-top">
+                <!-- BEGIN HEADER INNER -->
+                <div class="page-header-inner ">
+                    <!-- BEGIN LOGO -->
+                    <div class="page-logo">
+                        <a href="index.html">
+                            <img src="../assets/layouts/layout/img/logo.png" alt="logo" class="logo-default" /> </a>
+                        <div class="menu-toggler sidebar-toggler">
+                            <span></span>
+                        </div>
+                    </div>
+                    <!-- END LOGO -->
+                    <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                    <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span></span>
+                    </a>
+                    <!-- END RESPONSIVE MENU TOGGLER -->
+                    <!-- BEGIN TOP NAVIGATION MENU -->
+                    <div class="top-menu">
+                        <ul class="nav navbar-nav pull-right">
+                            <!-- BEGIN NOTIFICATION DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            
+                            <!-- BEGIN INBOX DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-extended dropdown-inbox" id="header_inbox_bar">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <i class="icon-envelope-open"></i>
+                                    <span class="badge badge-default"> 0 </span>
+                                </a>
+                                <!--<ul class="dropdown-menu">
+                                    <li class="external">
+                                        <h3>You have
+                                            <span class="bold">7 New</span> Messages</h3>
+                                        <a href="app_inbox.html">view all</a>
+                                    </li>
+                                    <li>
+                                        <ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../assets/layouts/layout3/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Lisa Wong </span>
+                                                        <span class="time">Just Now </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../assets/layouts/layout3/img/avatar3.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Richard Doe </span>
+                                                        <span class="time">16 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../assets/layouts/layout3/img/avatar1.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Bob Nilson </span>
+                                                        <span class="time">2 hrs </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../assets/layouts/layout3/img/avatar2.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Lisa Wong </span>
+                                                        <span class="time">40 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed auctor 40% nibh congue nibh... </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span class="photo">
+                                                        <img src="../assets/layouts/layout3/img/avatar3.jpg" class="img-circle" alt=""> </span>
+                                                    <span class="subject">
+                                                        <span class="from"> Richard Doe </span>
+                                                        <span class="time">46 mins </span>
+                                                    </span>
+                                                    <span class="message"> Vivamus sed congue nibh auctor nibh congue nibh. auctor nibh auctor nibh... </span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>-->
+                            </li>
+                            
+                            <!-- BEGIN USER LOGIN DROPDOWN -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-user">
+                                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+                                    <img alt="" class="img-circle" src="<?= $this->url->get('assets/main/uploads/' . $this->session->get('auth')['dataImage']) ?>" />
+                                    <span class="username username-hide-on-mobile"> <?= ucwords($this->session->get('auth')['fullname']) ?> </span>
+                                    <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-default">
+                                    <li>
+                                        <a href="<?= $this->url->get('dashboard/profile') ?>">
+                                            <i class="icon-user"></i> My Profile </a>
+                                    </li>
+                                    
+                                    <li class="divider"> </li>
+                                    
+                                    <li>
+                                        <a href="<?= $this->url->get('logout/') ?>">
+                                            <i class="icon-key"></i> Sign Out </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!-- END USER LOGIN DROPDOWN -->
+                            <!-- BEGIN QUICK SIDEBAR TOGGLER -->
+                            <!-- DOC: Apply "dropdown-dark" class after below "dropdown-extended" to change the dropdown styte -->
+                            <li class="dropdown dropdown-quick-sidebar-toggler">
+                                <a href="<?= $this->url->get('logout/') ?>" class="dropdown-toggle">
+                                    <i class="icon-logout"></i>
+                                </a>
+                            </li>
+                            <!-- END QUICK SIDEBAR TOGGLER -->
+                        </ul>
+                    </div>
+                    <!-- END TOP NAVIGATION MENU -->
+                </div>
+                <!-- END HEADER INNER -->
+            </div>
+            <!-- END HEADER -->
+            
+            
+            <?= $this->partial('partials/menu') ?>
+            
+            <!-- BEGIN CONTENT -->
+                <div class="page-content-wrapper">
+                    <!-- BEGIN CONTENT BODY -->
+                    <div class="page-content">
+                        <!-- BEGIN PAGE HEADER-->
+                        
+                        <!-- BEGIN PAGE BAR -->
+                        <div class="page-bar">
+                            <ul class="page-breadcrumb">
+                                <li>
+                                    <a href="<?= $this->url->get('/') ?>">Home</a>
+                                    <i class="fa fa-circle"></i>
+                                </li>
+                                
+                            </ul>
+                            <div class="page-toolbar">
+                                <div class="btn-group pull-right">
+                                    <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+                                        <i class="fa fa-angle-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu pull-right" role="menu">
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-bell"></i> Notifications</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-shield"></i> Support | Need Help?</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-user"></i> Health Complains</a>
+                                        </li>
+                                        <li class="divider"> </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="icon-bag"></i> Set Appointment</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END PAGE BAR -->
 
-	<div class="mobile-menu-left-overlay"></div>
-	
-    	
-    <!-- Start right content -->
-        <div class="page-content">
                         
 <!-- ============================================================= HEADER : END ============================================================= -->
 <section id="cart-page">
     <div class="container">
     <div style="height:50px;"></div>   
-    <div class="alert alert-danger"><strong>Error 404. Sorry Page Not Found. Go Shopping Now.</strong></div>
+    <div class="alert alert-danger"><strong>Error 404. Sorry Page Not Found. Check Page Spelling.</strong></div>
 
 </div>
 </section>
 
-	</div><!--.page-content-->
+                        
+                    </div>
+                    <!-- END CONTENT BODY -->
+                </div>
+                <!-- END CONTENT -->
+                
+                </div>
+            <!-- END CONTAINER -->
+            
+            <?= $this->partial('partials/footer') ?>
+            </div>
 
 <?= $this->assets->outputJs('footers') ?>
 

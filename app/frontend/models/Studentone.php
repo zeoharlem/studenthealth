@@ -45,6 +45,14 @@ class Studentone extends BaseModel{
                 "Multiple\\Frontend\\Models\\Imagecaption",
                 'register_id',
                 array('reusable' => true));
+        
+        $this->allowEmptyStringValues(array(
+            'illness_details', 'genotype', 'blood_group'
+        ));
+    }
+    
+    public function beforeValidationOnCreate(){
+        $this->date_of_register    = new \Phalcon\Db\RawValue('NOW()');
     }
     
     public function getRegister(){
@@ -65,5 +73,13 @@ class Studentone extends BaseModel{
     
     public function getImagecaption(){
         return $this->getRelated('Multiple\Frontend\Models\Imagecaption');
+    }
+    
+    public function validation(){
+        $validator  = new \Phalcon\Validation();
+        $validator->add("register_id", new \Phalcon\Validation\Validator\Uniqueness(array(
+            "message" => "Student already Existed. Contact Administrator"
+        )));
+        return $this->validate($validator);
     }
 }

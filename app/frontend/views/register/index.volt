@@ -80,7 +80,8 @@
         
         <div class="row">
             <div class="col-sm-4 col-sm-offset-4">
-                <form class="form-signin" role="form" method="post" action="{{url('register/')}}">
+                {{flash.output()}}
+                <form class="form-signin" role="form" method="post" action="{{url('register/signup')}}">
                 <h2 class="form-signin-heading">REGISTER</h2>
                 <div class="form-group">
                     <input type="text" name="firstname" class="form-control input-lg" placeholder="First Name" required autofocus>

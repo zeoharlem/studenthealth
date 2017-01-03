@@ -15,4 +15,13 @@ namespace Multiple\Frontend\Controllers;
  */
 class NewsEventsController extends BaseController{
     //put your code here
+    public function initialize() {
+        parent::initialize();
+        \Phalcon\Tag::appendTitle('News and Events');
+    }
+    
+    public function indexAction(){
+        $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_ACTION_VIEW);
+        return;
+    }
 }

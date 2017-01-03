@@ -34,6 +34,12 @@ class Helper extends \Phalcon\Mvc\User\Component{
         }
     }
     
+    public function setActiveLink($string){
+        $urlStringArray = preg_split("/\//",$_SERVER['REQUEST_URI']);
+        $currentNameCtr = empty($string) ? $this->dispatcher->getControllerName() : $string;
+        return in_array($currentNameCtr, $urlStringArray) ? 'active' : '';
+    }
+    
     //USing Adapter Method to get the getMessages();
     public function getErrorMsgs($classVar, $rd){
         $outputs = [];

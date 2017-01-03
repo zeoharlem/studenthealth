@@ -5,80 +5,151 @@
 {% endblock %}
 
 {% block content %}
+<h1 class="page-title"> <strong>DASHBOARD VIEW</strong>
+    <small></small>
+</h1>
 <div class="row">
-				<div class="col-lg-3 col-lg-pull-6 col-md-6 col-sm-6">
-					<section class="box-typical">
-						<div class="profile-card">
-							<div class="profile-card-photo">
-								<img src="img/photo-220-1.jpg" alt=""/>
-							</div>
-							<div class="profile-card-name">Sarah Sanchez</div>
-							<div class="profile-card-status">Company Founder</div>
-							<div class="profile-card-location">Greater Seattle Area</div>
-							<button type="button" class="btn btn-rounded">Follow</button>
-							<div class="btn-group">
-								<button type="button"
-										class="btn btn-rounded btn-primary-outline dropdown-toggle"
-										data-toggle="dropdown"
-										aria-haspopup="true"
-										aria-expanded="false">
-									Connect
-								</button>
-								<div class="dropdown-menu">
-									<a class="dropdown-item" href="#"><span class="font-icon font-icon-home"></span>Quant and Verbal</a>
-									<a class="dropdown-item" href="#"><span class="font-icon font-icon-cart"></span>Real Gmat Test</a>
-									<a class="dropdown-item" href="#"><span class="font-icon font-icon-speed"></span>Prep Official App</a>
-									<a class="dropdown-item" href="#"><span class="font-icon font-icon-users"></span>CATprer Test</a>
-									<a class="dropdown-item" href="#"><span class="font-icon font-icon-comments"></span>Third Party Test</a>
-								</div>
-							</div>
-						</div><!--.profile-card-->
-
-						<div class="profile-statistic tbl">
-							<div class="tbl-row">
-								<div class="tbl-cell">
-									<b>200</b>
-									Connections
-								</div>
-								<div class="tbl-cell">
-									<b>1.9M</b>
-									Followers
-								</div>
-							</div>
-						</div>
-
-						<ul class="profile-links-list">
-							<li class="nowrap">
-								<i class="font-icon font-icon-earth-bordered"></i>
-								<a href="#">example.com</a>
-							</li>
-							<li class="nowrap">
-								<i class="font-icon font-icon-fb-fill"></i>
-								<a href="#">facebook.com/example</a>
-							</li>
-							<li class="nowrap">
-								<i class="font-icon font-icon-vk-fill"></i>
-								<a href="#">vk.com/example</a>
-							</li>
-							<li class="nowrap">
-								<i class="font-icon font-icon-in-fill"></i>
-								<a href="#">linked.in/example</a>
-							</li>
-							<li class="nowrap">
-								<i class="font-icon font-icon-tw-fill"></i>
-								<a href="#">twitter.com/example</a>
-							</li>
-							<li class="divider"></li>
-							<li>
-								<i class="font-icon font-icon-pdf-fill"></i>
-								<a href="#">Export page as PDF</a>
-							</li>
-						</ul>
-					</section><!--.box-typical-->
-
-					
-				</div><!--.col- -->
-
-{{this.getContent()}}
+                            <div class="col-md-12">
+                                
+                                {{flash.output()}}
+                                
+                                <!-- BEGIN PROFILE SIDEBAR -->
+                                <div class="col-md-5">
+                                    <!-- PORTLET MAIN -->
+                                    <div class="portlet light profile-sidebar-portlet ">
+                                        <!-- SIDEBAR USERPIC -->
+                                        <div class="profile-userpic">
+                                            <img src="{{url('assets/main/uploads/'~dataImage.image_url)}}" class="img-responsive" alt=""> </div>
+                                        <!-- END SIDEBAR USERPIC -->
+                                        <!-- SIDEBAR USER TITLE -->
+                                        <div class="profile-usertitle">
+                                            <div class="profile-usertitle-name"> {{session.get('auth')['fullname'] | capitalize}} </div>
+                                            <div class="profile-usertitle-job"> {{session.get('auth')['email']}} </div>
+                                        </div>
+                                        <!-- END SIDEBAR USER TITLE -->
+                                        <!-- SIDEBAR BUTTONS -->
+                                        <div class="profile-userbuttons">
+                                            <button type="button" class="btn btn-circle green btn-sm">Upload Picture</button>
+                                            <button type="button" class="btn btn-circle red btn-sm">Remove Picture</button>
+                                        </div>
+                                        <!-- END SIDEBAR BUTTONS -->
+                                        <!-- PORTLET MAIN -->
+                                    <div class="portlet light ">
+                                        <p>&nbsp;</p>
+                                        <div>
+                                            <h4 class="profile-desc-title">Address / Location</h4>
+                                            <span class="profile-desc-text"> {{dataImage.register.address}} </span>
+                                            <div class="margin-top-20 profile-desc-link">
+                                                <i class="fa fa-globe"></i>
+                                                <a href="#">{{session.get('auth')['email']}}</a>
+                                            </div>
+                                            <div class="margin-top-20 profile-desc-link">
+                                                <i class="fa fa-twitter"></i>
+                                                <a href="#">{{session.get('auth')['phonenumber']}}</a>
+                                            </div>
+                                            <div class="margin-top-20 profile-desc-link">
+                                                <i class="fa fa-facebook"></i>
+                                                <a href="#">facebook</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- END PORTLET MAIN -->
+                                    </div>
+                                    <!-- END PORTLET MAIN -->
+                                    
+                                </div>
+                                <!-- END BEGIN PROFILE SIDEBAR -->
+                                <!-- BEGIN PROFILE CONTENT -->
+                                <div class="profile-content">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <!-- BEGIN PORTLET -->
+                                            <div class="portlet light ">
+                                                <div class="portlet-title">
+                                                    <div class="caption caption-md">
+                                                        <i class="icon-bar-chart theme-font hide"></i>
+                                                        <span class="caption-subject font-blue-madison bold uppercase">EVENT | NEWS</span>
+                                                        <span class="caption-helper hide">weekly stats...</span>
+                                                    </div>
+                                                    <div class="actions">
+                                                        <div class="btn-group btn-group-devided" data-toggle="buttons">
+                                                            <label class="btn btn-transparent grey-salsa btn-circle btn-sm active">
+                                                                <input type="radio" name="options" class="toggle" id="option1">Today</label>
+                                                            <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                                                                <input type="radio" name="options" class="toggle" id="option2">Week</label>
+                                                            <label class="btn btn-transparent grey-salsa btn-circle btn-sm">
+                                                                <input type="radio" name="options" class="toggle" id="option2">Month</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="portlet-body">
+                                                    <div class="row number-stats margin-bottom-30">
+<div class="blog-page blog-content-1">
+                                                        <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="blog-post-sm bordered blog-container">
+                                                <div class="blog-img-thumb">
+                                                    <a href="javascript:;">
+                                                        <img src="../assets/pages/img/page_general_search/1.jpg" />
+                                                    </a>
+                                                </div>
+                                                <div class="blog-post-content">
+                                                    <h2 class="blog-title blog-post-title">
+                                                        <a href="javascript:;">Check HIV status! Reasons</a>
+                                                    </h2>
+                                                    <p class="blog-post-desc"> Lorem ipsum dolor sit amet adipiscing elit, sed diam nonummy </p>
+                                                    <div class="blog-post-foot">
+                                                        <div class="blog-post-meta">
+                                                            <i class="icon-calendar font-blue"></i>
+                                                            <a href="javascript:;">Oct 24, 2015</a>
+                                                        </div>
+                                                        <div class="blog-post-meta">
+                                                            <i class="icon-bubble font-blue"></i>
+                                                            <a href="javascript:;">14 Comments</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="blog-post-sm bordered blog-container">
+                                                <div class="blog-img-thumb">
+                                                    <a href="javascript:;">
+                                                        <img src="../assets/pages/img/page_general_search/02.jpg" />
+                                                    </a>
+                                                </div>
+                                                <div class="blog-post-content">
+                                                    <h2 class="blog-title blog-post-title">
+                                                        <a href="javascript:;">Drink 4 litres of water daily</a>
+                                                    </h2>
+                                                    <p class="blog-post-desc"> Lorem ipsum dolor sit amet adipiscing elit, sed diam nonummy </p>
+                                                    <div class="blog-post-foot">
+                                                        <div class="blog-post-meta">
+                                                            <i class="icon-calendar font-blue"></i>
+                                                            <a href="javascript:;">Oct 24, 2015</a>
+                                                        </div>
+                                                        <div class="blog-post-meta">
+                                                            <i class="icon-bubble font-blue"></i>
+                                                            <a href="javascript:;">14 Comments</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+</div>
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <!-- END PORTLET -->
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <!-- END PROFILE CONTENT -->
+                            </div>
+                        </div>
 {% endblock %}
-

@@ -18,12 +18,21 @@ class BaseController extends Controller{
     //put your code here
     public function initialize(){
         //var_dump($this->mailer); exit;
-        \Phalcon\Tag::prependTitle('Health System');
         \Phalcon\Tag::setTitleSeparator(' | ');
+        \Phalcon\Tag::prependTitle('Health System');
+        //var_dump($this->session->get('auth')['dataImage']); exit;
         $this->assets->collection('headers')
-                ->addCss('assets/admin/css/libs/font-awesome/css/font-awesome.min.css')
-                ->addCss('assets/admin/css/lib/bootstrap/bootstrap.min.css')
-                ->addCss('assets/admin/css/main.css');
+                ->addCss('assets/admin/global/plugins/font-awesome/css/font-awesome.min.css')
+                ->addCss('assets/admin/global/plugins/simple-line-icons/simple-line-icons.min.css')
+                ->addCss('assets/admin/global/plugins/bootstrap/css/bootstrap.min.css')
+                ->addCss('assets/admin/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css')
+                ->addCss('assets/admin/global/plugins/select2/css/select2.min.css')
+                ->addCss('assets/admin/global/plugins/select2/css/select2-bootstrap.min.css')
+                ->addCss('assets/admin/global/css/components-md.min.css')
+                ->addCss('assets/admin/global/css/plugins-md.min.css')
+                ->addCss('assets/admin/layouts/layout/css/layout.min.css')
+                ->addCss('assets/admin/layouts/layout/css/themes/darkblue.min.css')
+                ->addCss('assets/admin/layouts/layout/css/custom.min.css');
         
         //Cascading style sheet for the login interface
         $this->assets->collection('login')
@@ -47,11 +56,28 @@ class BaseController extends Controller{
         
         //Create | add the javascript script link
         $this->assets->collection('footers')
-                ->addJs('assets/admin/js/lib/jquery/jquery.min.js')
-                ->addJs('assets/admin/js/lib/tether/tether.min.js')
-                ->addJs('assets/admin/js/lib/bootstrap/bootstrap.min.js')
-                ->addJs('assets/admin/js/plugins.js')
-                ->addJs('assets/admin/js/app.js');
+                ->addJs('assets/admin/global/plugins/jquery.min.js')
+                ->addJs('assets/admin/global/plugins/bootstrap/js/bootstrap.min.js')
+                ->addJs('assets/admin/global/plugins/js.cookie.min.js')
+                ->addJs('assets/admin/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js')
+                ->addJs('assets/admin/global/plugins/jquery.blockui.min.js')
+                ->addJs('assets/admin/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js')
+                //<-- BEGIN PAGE PLUGIN -->
+                ->addJs('assets/admin/global/plugins/jquery-inputmask/jquery.inputmask.bundle.min.js')
+                ->addJs('assets/admin/global/plugins/jquery.input-ip-address-control-1.0.min.js')
+                ->addJs('assets/admin/global/plugins/select2/js/select2.full.min.js')
+                ->addJs('assets/admin/global/plugins/jquery-validation/js/jquery.validate.min.js')
+                ->addJs('assets/admin/global/plugins/jquery-validation/js/additional-methods.min.js')
+                ->addJs('assets/admin/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js')
+                //<!-- END PAGE LEVEL PLUGINS -->
+                ->addJs('assets/admin/global/scripts/app.min.js')
+                ->addJs('assets/admin/pages/scripts/form-input-mask.js')
+                ->addJs('assets/admin/layouts/layout/scripts/layout.min.js')
+                ->addJs('assets/admin/layouts/layout/scripts/demo.min.js')
+                ->addJs('assets/admin/layouts/global/scripts/quick-sidebar.min.js');
+        
+        //create active for view on side bar menus
+        $this->view->setVar('setActive', $this->component->helper);
     }
     
     public function __dataTableJsCss(){
@@ -90,6 +116,12 @@ class BaseController extends Controller{
             $dataTables = new \DataTables\DataTable();
             return $dataTables->fromArray($builder)->sendResponse();
         }
+    }
+    
+    public function __setActiveLink($string=''){
+        $urlStringArray = preg_split("/\//",$_SERVER['REQUEST_URI']);
+        $currentNameCtr = empty($string) ? $this->dispatcher->getControllerName() : $string;
+        return in_array($currentNameCtr, $urlStringArray) ? 'active' : '';
     }
     
     //This method should be used for associative array

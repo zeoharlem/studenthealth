@@ -33,14 +33,15 @@ class RegisterController extends BaseController{
             if($register->create($this->request->getPost())){
                 $this->flash->success('Registration Done Successfully');
                 $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
-                $this->response->redirect('register/?token='.  uniqid());
+                $this->response->redirect('index/?token='.  uniqid());
             }
             else{
-                $this->component->helper->getErrorMsgs($register,'register/?error');
+                $this->component->helper->getErrorMsgs($register,'register/');
                 $this->flash->error('Unable to register user');
             }
         }
         $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
+        $this->response->redirect('register/?task=redirect_incline');
         return;
     }
 }

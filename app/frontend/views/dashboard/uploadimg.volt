@@ -1,39 +1,21 @@
+{% extends "templates/base.volt" %}
+
 {% block head %}
-    {{ this.assets.outputCss('profile') }}
+    
 {% endblock %}
 
 {% block content %}
-<div role="tabpanel" class="tab-pane active" id="tabs-3-tab-1">
-        
-            <section class="box-typical box-typical-padding">
-            {{flash.output()}}
-                                                <form method="post" enctype="multipart/form-data">
-                                                    
-                                                    <div class="form-group row">
-                                                        <label class="col-sm-4 form-control-label"><strong>Select Image(400px by 400px)</strong></label>
-                                                        <div class="col-sm-6">
-                                                            <input type="file" name="filename" class="form-control" />
-                                                        </div>
-                                                        <div class="col-sm-2"></div>
-                                                    </div>
-                                                <div class="box-typical-footer">
-                                                <div class="tbl">
-                                                        <div class="tbl-row">
-                                                                <div class="tbl-cell">
-                                                                        <div class="tbl-cell">
-                                                                            <a href="{{url('dashboard/')}}" type="submit" id="stage-1" class="btn btn-rounded btn-warning">Previous</a>
-                                                                        </div>
-                                                                </div>
-                                                                <div class="tbl-cell tbl-cell-action">
-                                                                        <button type="submit" id="stage-1" class="btn btn-rounded">Submit Now</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                </div>
-                                            </div>
-                                            
-                                             </form><!--.box-typical-->
-                                        </section>
-			</div><!--.row-->
+
+<!-- END PAGE HEADER-->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>&nbsp;</p>
+                                <div class="alert alert-danger">To start registration, <strong>upload your passport photograph(300px by 300px)</strong></div>
+                                <form action="{{url('dashboard/uploadimg')}}" class="dropzone dropzone-file-area" id="my-dropzone" style="margin-top: 50px;">
+                                    <h3 class="sbold btn btn-lg btn-primary">Click within box to Upload Passport Photograph</h3>
+                                    <p> Kindly make sure that you are uploading a passport look picture. </p>
+                                </form>
+                            </div>
+                        </div>
 
 {% endblock %}

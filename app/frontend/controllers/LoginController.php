@@ -24,11 +24,25 @@ class LoginController extends BaseController{
             if($register != false){
                 if($this->security->checkHash(
                         $this->request->getPost('password'), $register->password)){
-                    $this->__registerSession($register);
+                    if($register->jamb_reg_no == $this->session->get('jambregno')){
+                        $this->__registerSession($register);
+                        $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
+                        $this->flash->success('You are welcome! '.$register->firstname);
+                        $this->response->redirect('dashboard/index?token='.uniqid());
+                        return;
+                    }
+                    else{
+                        $this->flash->error('Please Kindly use your Jamb Number');
+                        $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
+                        $this->response->redirect('index/?token=' . uniqid());
+                        return;
+                    }
+                }
+                else{
+                    $this->flash->error("Your Password is wrong. Try Again");
                     $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
-                    $this->flash->success('You are welcome! '.$register->firstname);
-                    $this->response->redirect('dashboard/index?token='.uniqid());
-                    return;
+                    $this->response->redirect('index/');
+                    $this->security->hash(rand());
                 }
             }
             else{
@@ -56,6 +70,7 @@ class LoginController extends BaseController{
             'email'         => $register->email,
             'register_id'   => $register->register_id,
             'fullname'      => $register->firstname.' '.$register->lastname,
+            'dataImage'     => $register->imagecaption->image_url,
             'firstname'     => $register->firstname,
             'lastname'      => $register->lastname,
             'phonenumber'   => $register->phonenumber,
