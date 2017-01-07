@@ -4,7 +4,22 @@
  * and open the template in the editor.
  */
 
-
-$(document).ready(function(){
-    
-})
+(function(){
+    $(document).ready(function(){
+        //window.alert('sdfsdf');
+        $('.immunized').click(function(e){
+            //e.preventDefault();
+            var thisRadioBtn    = $(this);
+            if($('.immunized').is(':checked')){
+                if(thisRadioBtn.val() === 'yes'){
+                    thisRadioBtn.parents(".md-radio-inline")
+                            .siblings(".col-md-2").removeClass("hide");
+                }
+                else{
+                    thisRadioBtn.parents(".md-radio-inline")
+                            .siblings(".col-md-2").addClass("hide");
+                }
+            }
+        })
+    });
+})();

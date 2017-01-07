@@ -45,7 +45,7 @@ class Studentone extends BaseModel{
                 "Multiple\\Frontend\\Models\\Imagecaption",
                 'register_id',
                 array('reusable' => true));
-        
+        $this->skipAttributes(array('nof'));
         $this->allowEmptyStringValues(array(
             'illness_details', 'genotype', 'blood_group'
         ));

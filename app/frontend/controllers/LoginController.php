@@ -41,13 +41,12 @@ class LoginController extends BaseController{
                 else{
                     $this->flash->error("Your Password is wrong. Try Again");
                     $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
-                    $this->response->redirect('index/');
+                    $this->response->redirect('index/?token='.uniqid());
                     $this->security->hash(rand());
                 }
             }
             else{
-                $this->dispatcher->forward(array(
-                    'controller' => 'index', 'action' => 'index'));
+                $this->response->redirect('index/?token=' . uniqid());
                 $this->flash->error('Not a valid user. Register Now');
                 return;
             }

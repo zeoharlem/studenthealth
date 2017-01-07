@@ -96,7 +96,7 @@
                     <input type="password" name="password" class="form-control input-lg" placeholder="Password" required>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">LOGIN</button><br>
-                Need an account? <a href="{{url('register/')}}">Sign up</a> now!
+                <a href="{{url('register/')}}" class="btn btn-block btn-warning btn-lg">Sign up</a>
               </form>
             </div>
         </div>

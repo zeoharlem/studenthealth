@@ -74,7 +74,8 @@ class BaseController extends Controller{
                 ->addJs('assets/admin/pages/scripts/form-input-mask.js')
                 ->addJs('assets/admin/layouts/layout/scripts/layout.min.js')
                 ->addJs('assets/admin/layouts/layout/scripts/demo.min.js')
-                ->addJs('assets/admin/layouts/global/scripts/quick-sidebar.min.js');
+                ->addJs('assets/admin/layouts/global/scripts/quick-sidebar.min.js')
+                ->addJs('assets/admin/js/customs.js');
         
         //create active for view on side bar menus
         $this->view->setVar('setActive', $this->component->helper);

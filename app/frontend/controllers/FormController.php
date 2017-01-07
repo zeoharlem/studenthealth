@@ -66,40 +66,32 @@ class FormController extends BaseController{
         if($this->request->isPost() && $this->request->isAjax()){
             $setPost    = $this->request->getPost();
             $arraySubmitted = array(
-                'fruits'            => array(
-                    $setPost['fruits'],$setPost['fruits_nof']),
-                'pastries'          => array(
-                    $setPost['pastries'],$setPost['pastries_nof']),
-                'cooked_vegetables' => array(
-                    $setPost['cooked_vegetables'], $setPost['cooked_vegetables_nof']),
-                'fried_foods'       => array(
-                    $setPost['fried_foods'], $setPost['fried_food_nof']),
-                'soft_drink'        => array(
-                    $setPost['soft_drink'], $setPost['soft_drink_nof']),
-                'red_meat'          => array(
-                    $setPost['red_meat'], $setPost['red_meat_nof']),
+                'hepatitis'            => array(
+                    $setPost['hepatitis'],$setPost['immune_hepatitis']),
+                'yellow_fever'          => array(
+                    $setPost['yellow_fever'],$setPost['immune_yellow_fever']),
+                'tetanus' => array(
+                    $setPost['tetanus'], $setPost['immune_tetanus']),
+                'csm'       => array(
+                    $setPost['csm'], $setPost['immune_csm']),
             );
             
             //Unset the array variables
-            unset($setPost['fruits']); 
-            unset($setPost['pastries']); 
-            unset($setPost['red_meat']);
-            unset($setPost['soft_drink']);
-            unset($setPost['fried_foods']);
-            unset($setPost['cooked_vegetables']);
+            unset($setPost['hepatitis']); 
+            unset($setPost['yellow_fever']); 
+            unset($setPost['tetanus']);
+            unset($setPost['csm']);
             
             //Unset the variables with the number of values
-            unset($setPost['fruits_nof']);
-            unset($setPost['pastries_nof']);
-            unset($setPost['red_meat_nof']);
-            unset($setPost['soft_drink_nof']);
-            unset($setPost['fried_food_nof']);
-            unset($setPost['cooked_vegetables_nof']);
+            unset($setPost['immune_hepatitis']);
+            unset($setPost['immune_yellow_fever']);
+            unset($setPost['immune_tetanus']);
+            unset($setPost['immune_csm']);
             
             //Combine not using array_combine use +
             $studentOne = new \Multiple\Frontend\Models\Studentone();
             $response->setHeader('Content-Type', 'application/json');
-            $stackArray = $setPost + array('nof' => json_encode($arraySubmitted));
+            $stackArray = $setPost + array('immunize' => json_encode($arraySubmitted));
             
             if($studentOne->save($stackArray) != false){
                 $response->setJsonContent(array('status' => 'OK'));

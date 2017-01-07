@@ -264,7 +264,57 @@
         </div>
         <div class="col-md-6">
             <?php if ($dataImage->studentone) { ?>
-            <strong>Instructions</strong><br/>
+            <div class="portlet light portlet-fit bordered">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class=" icon-layers font-green"></i>
+                        <span class="caption-subject font-green bold uppercase">What you need to do</span>
+                        <div class="caption-desc font-grey-cascade"> Please Kindly follow the instructions below so as to get <pre class="mt-code">maximum results</pre> </div>
+                    </div>
+                </div>
+                <div class="portlet-body">
+                    <div class="mt-element-list">
+                        <div class="mt-list-head list-news font-white bg-blue">
+                            <div class="list-head-title-container">
+                                <span class="badge badge-primary pull-right">2</span>
+                                <h3 class="list-title">Status Instructions</h3>
+                            </div>
+                        </div>
+                        <div class="mt-list-container list-news">
+                            <ul>
+                                <li class="mt-list-item">
+                                    <div class="list-icon-container">
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="list-datetime bold uppercase font-green"> <?php echo date('F d, Y'); ?> </div>
+                                    <div class="list-item-content">
+                                        <h3 class="uppercase">
+                                            <a href="javascript:;">Chest Xray</a>
+                                        </h3>
+                                        <p>Proceed to do Your Chest Xray at -------- and take the result to JAJA to see the vetting Officer</p>
+                                    </div>
+                                </li>
+                                <li class="mt-list-item">
+                                    <div class="list-icon-container">
+                                        <a href="javascript:;">
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="list-datetime bold uppercase font-green"> <?php echo date('F d, Y'); ?> </div>
+                                    <div class="list-item-content">
+                                        <h3 class="uppercase">
+                                            <a href="javascript:;">Urinalysis </a>
+                                        </h3>
+                                        <p>Proceed to do your Urinalysis at JAJA Clinic.</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <?php } ?>
         </div>
     </div>

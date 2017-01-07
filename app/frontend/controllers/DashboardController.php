@@ -124,6 +124,13 @@ class DashboardController extends BaseController{
         $profile    = \Multiple\Frontend\Models\
                 Register::findFirstByRegister_id(
                         $this->session->get('auth')['register_id']);
+        
+        $profile->email         = $this->request->getPost('email');
+        $profile->lastname      = $this->request->getPost('lastname');
+        $profile->firstname     = $this->request->getPost('firstname');
+        $profile->phonenumber   = $this->request->getPost('phonenumber');
+        $profile->address       = $this->request->getPost('address');
+        
         if($this->request->isPost()){
             if($profile->update($this->request->getPost())){
                 $this->flash->success('Update was successful done');

@@ -4,7 +4,12 @@ var FormInputMask = function () {
         
 
         $("#mask_date").inputmask("y-m-d", {
-            autoUnmask: true
+            //autoUnmask: true,
+            "placeholder": "yyyy-mm-dd"
+        }); //direct mask        
+        $(".mask_date").inputmask("y-m-d", {
+            //"mask": true,
+            "placeholder": "yyyy-mm-dd"
         }); //direct mask        
         $("#mask_date1").inputmask("d/m/y", {
             "placeholder": "*"

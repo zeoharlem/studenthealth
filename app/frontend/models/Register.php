@@ -30,7 +30,7 @@ class Register extends BaseModel{
                 'register_id',
                 array('reusable' => true));
         
-        $this->skipAttributesOnUpdate(array('jamb_reg_no'));
+        $this->skipAttributesOnUpdate(array('jamb_reg_no','password'));
     }
     
     public function beforeValidationOnCreate(){
@@ -38,6 +38,7 @@ class Register extends BaseModel{
         $this->date_of_registration = new \Phalcon\Db\RawValue('NOW()');
         $this->codename = $this->getDI()->get('component')->helper->makeRandomInts(11);
         $this->jamb_reg_no          = $this->getDI()->get('session')->get('jambregno');
+        $this->skipAttributesOnUpdate(array('password'));
     }
     
     public function getStudentone(){

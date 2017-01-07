@@ -17,7 +17,7 @@
                                         <div class="caption">
                                             <i class=" icon-layers font-red"></i>
                                             <span class="caption-subject font-red bold uppercase">
-                                                <span class="step-title"> Step 1 of 4 </span>
+                                                <span class="step-title"> Step 1 of 6 </span>
                                             </span>
                                         </div>
                                         
@@ -496,6 +496,36 @@
                                                                 </div>
                                                             </div>
                                                             
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-3">Name of Next of Kin
+                                                                    <span class="required"> * </span>
+                                                                </label>
+                                                                <div class="col-md-4">
+                                                                    <input type="text" class="form-control" placeholder="Next of Kin" name="next_of_kin_name" />
+                                                                    <span class="help-block"> name of Next of Kin </span>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-3">Phone Number of Next of Kin
+                                                                    <span class="required"> * </span>
+                                                                </label>
+                                                                <div class="col-md-4">
+                                                                    <input type="text" class="form-control" placeholder="Phone Number Next of Kin" name="next_of_kin_phone_number" />
+                                                                    <span class="help-block"> Phone Number of Next of Kin </span>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="form-group">
+                                                                <label class="control-label col-md-3">Address of Next of Kin
+                                                                    <span class="required"> * </span>
+                                                                </label>
+                                                                <div class="col-md-4">
+                                                                    <input type="text" class="form-control" placeholder="Address of Next of Kin" name="next_kin_address" />
+                                                                    <span class="help-block"> Type Address of Next of Kin </span>
+                                                                </div>
+                                                            </div>
+                                                            
                                                         </div>
                                                         
                                                         <!-- TAB 3 -->
@@ -929,20 +959,23 @@
                                                                 <label class="control-label col-md-3">Hepatitis B</label>
                                                                 <div class="md-radio-inline col-md-4">
                                                                     <div class="md-radio">
-                                                                        <input type="radio" id="radiom" name="hepatitis" value="yes" class="md-radiobtn">
+                                                                        <input type="radio" id="radiom" name="hepatitis" value="yes" class="md-radiobtn immunized">
                                                                         <label for="radiom">
                                                                             <span></span>
                                                                             <span class="check"></span>
                                                                             <span class="box"></span> Yes </label>
                                                                     </div>
                                                                     <div class="md-radio">
-                                                                        <input type="radio" id="radion" name="hepatitis" value="no" class="md-radiobtn" checked>
+                                                                        <input type="radio" id="radion" name="hepatitis" value="no" class="md-radiobtn immunized" checked>
                                                                         <label for="radion">
                                                                             <span></span>
                                                                             <span class="check"></span>
                                                                             <span class="box"></span> No </label>
                                                                     </div>
-                                                                    
+                                                                </div>
+                                                                <div class="col-md-2 hide">
+                                                                    <input type="text" name="immune_hepatitis"  class="form-control mask_date" />
+                                                                    <span class="help-block"> Enter the Date of Immunization </span>
                                                                 </div>
                                                             </div>
 
@@ -950,14 +983,14 @@
                                                                 <label class="control-label col-md-3">Yellow Fever</label>
                                                                 <div class="md-radio-inline col-md-4">
                                                                     <div class="md-radio">
-                                                                        <input type="radio" id="radioo" name="yellow_fever" value="yes" class="md-radiobtn">
+                                                                        <input type="radio" id="radioo" name="yellow_fever" value="yes" class="md-radiobtn immunized">
                                                                         <label for="radioo">
                                                                             <span></span>
                                                                             <span class="check"></span>
                                                                             <span class="box"></span> Yes </label>
                                                                     </div>
                                                                     <div class="md-radio">
-                                                                        <input type="radio" id="radiop" name="yellow_fever" value="no" class="md-radiobtn" checked>
+                                                                        <input type="radio" id="radiop" name="yellow_fever" value="no" class="md-radiobtn immunized" checked>
                                                                         <label for="radiop">
                                                                             <span></span>
                                                                             <span class="check"></span>
@@ -965,20 +998,24 @@
                                                                     </div>
                                                                     
                                                                 </div>
+                                                                <div class="col-md-2 hide">
+                                                                    <input type="text" name="immune_yellow_fever"  class="form-control mask_date" />
+                                                                    <span class="help-block"> Enter the Date of Immunization </span>
+                                                                </div>
                                                             </div>
 
                                                             <div class="form-group form-md-radios">
                                                                 <label class="control-label col-md-3">Tetanus</label>
                                                                 <div class="md-radio-inline col-md-4">
                                                                     <div class="md-radio">
-                                                                        <input type="radio" id="radioq" name="tetanus" value="yes" class="md-radiobtn">
+                                                                        <input type="radio" id="radioq" name="tetanus" value="yes" class="md-radiobtn immunized">
                                                                         <label for="radioq">
                                                                             <span></span>
                                                                             <span class="check"></span>
                                                                             <span class="box"></span> Yes </label>
                                                                     </div>
                                                                     <div class="md-radio">
-                                                                        <input type="radio" id="radior" name="tetanus" value="no" class="md-radiobtn" checked>
+                                                                        <input type="radio" id="radior" name="tetanus" value="no" class="md-radiobtn immunized" checked>
                                                                         <label for="radior">
                                                                             <span></span>
                                                                             <span class="check"></span>
@@ -986,25 +1023,33 @@
                                                                     </div>
                                                                     
                                                                 </div>
+                                                                <div class="col-md-2 hide">
+                                                                    <input type="text"name="immune_tetanus" class="form-control mask_date" />
+                                                                    <span class="help-block"> Enter the Date of Immunization </span>
+                                                                </div>
                                                             </div>
                                                             <div class="form-group form-md-radios">
                                                                 <label class="control-label col-md-3">C.S.M</label>
                                                                 <div class="md-radio-inline col-md-4">
                                                                     <div class="md-radio">
-                                                                        <input type="radio" id="radios" name="csm" value="yes" class="md-radiobtn">
+                                                                        <input type="radio" id="radios" name="csm" value="yes" class="md-radiobtn immunized">
                                                                         <label for="radios">
                                                                             <span></span>
                                                                             <span class="check"></span>
                                                                             <span class="box"></span> Yes </label>
                                                                     </div>
                                                                     <div class="md-radio">
-                                                                        <input type="radio" id="radiot" name="csm" value="no" class="md-radiobtn" checked>
+                                                                        <input type="radio" id="radiot" name="csm" value="no" class="md-radiobtn immunized" checked>
                                                                         <label for="radiot">
                                                                             <span></span>
                                                                             <span class="check"></span>
                                                                             <span class="box"></span> No </label>
                                                                     </div>
                                                                     
+                                                                </div>
+                                                                <div class="col-md-2 hide">
+                                                                    <input type="text" name="immune_csm" class="form-control mask_date" />
+                                                                    <span class="help-block"> Enter the Date of Immunization </span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1124,180 +1169,7 @@ exercises such as jogging, tennis, golf, gardening or walking for exercise?</lab
                                                                 </div>
                                                             </div>
                                                             
-                                                            <h3>In a typical week, do you eat/drink the following?</h3>
                                                             
-                                                            <div class="form-group form-md-radios">
-                                                                <label class="control-label col-md-3">Fruits</label>
-                                                                <div class="md-radio-inline col-md-2">
-                                                                    <div class="md-radio">
-                                                                        <input type="radio" id="radiok1" name="fruits" value="yes" class="md-radiobtn">
-                                                                        <label for="radiok1">
-                                                                            <span></span>
-                                                                            <span class="check"></span>
-                                                                            <span class="box"></span> Yes </label>
-                                                                    </div>
-                                                                    <div class="md-radio">
-                                                                        <input type="radio" id="radiol1" name="fruits" value="no" class="md-radiobtn" checked>
-                                                                        <label for="radiol1">
-                                                                            <span></span>
-                                                                            <span class="check"></span>
-                                                                            <span class="box"></span> No </label>
-                                                                    </div>
-                                                                    
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <select class="form-control select-control" name="fruits_nof">
-                                                                        <option value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                    </select>
-                                                                    <span class="help-block"> Number of Time(s) </span>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                            
-                                                            
-                                                            <div class="form-group form-md-radios">
-                                                                <label class="control-label col-md-3">Cooked vegetables</label>
-                                                                <div class="md-radio-inline col-md-2">
-                                                                    <div class="md-radio">
-                                                                        <input type="radio" id="radiok12" name="cooked_vegetables" value="yes" class="md-radiobtn">
-                                                                        <label for="radiok12">
-                                                                            <span></span>
-                                                                            <span class="check"></span>
-                                                                            <span class="box"></span> Yes </label>
-                                                                    </div>
-                                                                    <div class="md-radio">
-                                                                        <input type="radio" id="radiol12" name="cooked_vegetables" value="no" class="md-radiobtn" checked>
-                                                                        <label for="radiol12">
-                                                                            <span></span>
-                                                                            <span class="check"></span>
-                                                                            <span class="box"></span> No </label>
-                                                                    </div>
-                                                                    
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <select class="form-control select-control" name="cooked_vegetables_nof">
-                                                                        <option value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                    </select>
-                                                                    <span class="help-block"> Number of Time(s) </span>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                            
-                                                            <div class="form-group form-md-radios">
-                                                                <label class="control-label col-md-3">Pastries</label>
-                                                                <div class="md-radio-inline col-md-2">
-                                                                    <div class="md-radio">
-                                                                        <input type="radio" id="radiok13" name="pastries" value="yes" class="md-radiobtn">
-                                                                        <label for="radiok13">
-                                                                            <span></span>
-                                                                            <span class="check"></span>
-                                                                            <span class="box"></span> Yes </label>
-                                                                    </div>
-                                                                    <div class="md-radio">
-                                                                        <input type="radio" id="radiol13" name="pastries" value="no" class="md-radiobtn" checked>
-                                                                        <label for="radiol13">
-                                                                            <span></span>
-                                                                            <span class="check"></span>
-                                                                            <span class="box"></span> No </label>
-                                                                    </div>
-                                                                    
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <select class="form-control select-control" name="pastries_nof">
-                                                                        <option value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                    </select>
-                                                                    <span class="help-block"> Number of Time(s) </span>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                            
-                                                            <div class="form-group form-md-radios">
-                                                                <label class="control-label col-md-3">Fried foods</label>
-                                                                <div class="md-radio-inline col-md-2">
-                                                                    <div class="md-radio">
-                                                                        <input type="radio" id="radiok12" name="fried_foods" value="yes" class="md-radiobtn">
-                                                                        <label for="radiok14">
-                                                                            <span></span>
-                                                                            <span class="check"></span>
-                                                                            <span class="box"></span> Yes </label>
-                                                                    </div>
-                                                                    <div class="md-radio">
-                                                                        <input type="radio" id="radiol12" name="fried_foods" value="no" class="md-radiobtn" checked>
-                                                                        <label for="radiol14">
-                                                                            <span></span>
-                                                                            <span class="check"></span>
-                                                                            <span class="box"></span> No </label>
-                                                                    </div>
-                                                                    
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <select class="form-control select-control" name="fried_food_nof">
-                                                                        <option value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                    </select>
-                                                                    <span class="help-block"> Number of Time(s) </span>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                            
-                                                            <div class="form-group form-md-radios">
-                                                                <label class="control-label col-md-3">Soft drinks</label>
-                                                                <div class="md-radio-inline col-md-2">
-                                                                    <div class="md-radio">
-                                                                        <input type="radio" id="radiok15" name="soft_drink" value="yes" class="md-radiobtn">
-                                                                        <label for="radiok15">
-                                                                            <span></span>
-                                                                            <span class="check"></span>
-                                                                            <span class="box"></span> Yes </label>
-                                                                    </div>
-                                                                    <div class="md-radio">
-                                                                        <input type="radio" id="radiol15" name="soft_drink" value="no" class="md-radiobtn" checked>
-                                                                        <label for="radiol15">
-                                                                            <span></span>
-                                                                            <span class="check"></span>
-                                                                            <span class="box"></span> No </label>
-                                                                    </div>
-                                                                    
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <select class="form-control select-control" name="soft_drink_nof">
-                                                                        <option value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                    </select>
-                                                                    <span class="help-block"> Number of Time(s) </span>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                            <div class="form-group form-md-radios">
-                                                                <label class="control-label col-md-3">Red meat e.g beef</label>
-                                                                <div class="md-radio-inline col-md-2">
-                                                                    <div class="md-radio">
-                                                                        <input type="radio" id="radiok16" name="red_meat" value="yes" class="md-radiobtn">
-                                                                        <label for="radiok16">
-                                                                            <span></span>
-                                                                            <span class="check"></span>
-                                                                            <span class="box"></span> Yes </label>
-                                                                    </div>
-                                                                    <div class="md-radio">
-                                                                        <input type="radio" id="radiol17" name="red_meat" value="no" class="md-radiobtn" checked>
-                                                                        <label for="radiol17">
-                                                                            <span></span>
-                                                                            <span class="check"></span>
-                                                                            <span class="box"></span> No </label>
-                                                                    </div>
-                                                                    
-                                                                </div>
-                                                                <div class="col-md-2">
-                                                                    <select class="form-control select-control" name="red_meat_nof">
-                                                                        <option value="1">1</option>
-                                                                        <option value="2">2</option>
-                                                                    </select>
-                                                                    <span class="help-block"> Number of Time(s) </span>
-                                                                </div>
-                                                            </div>
                                                             
                                                             
                                                         </div>
