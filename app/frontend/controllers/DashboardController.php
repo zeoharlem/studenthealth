@@ -124,14 +124,13 @@ class DashboardController extends BaseController{
         $profile    = \Multiple\Frontend\Models\
                 Register::findFirstByRegister_id(
                         $this->session->get('auth')['register_id']);
-        
-        $profile->email         = $this->request->getPost('email');
-        $profile->lastname      = $this->request->getPost('lastname');
-        $profile->firstname     = $this->request->getPost('firstname');
-        $profile->phonenumber   = $this->request->getPost('phonenumber');
-        $profile->address       = $this->request->getPost('address');
-        
         if($this->request->isPost()){
+            $profile->email         = $this->request->getPost('email');
+            $profile->lastname      = $this->request->getPost('lastname');
+            $profile->firstname     = $this->request->getPost('firstname');
+            $profile->phonenumber   = $this->request->getPost('phonenumber');
+            $profile->address       = $this->request->getPost('address');
+            
             if($profile->update($this->request->getPost())){
                 $this->flash->success('Update was successful done');
                 $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);
@@ -159,7 +158,9 @@ class DashboardController extends BaseController{
         if($this->request->isPost()){
             if($register){
                 if($this->security->checkHash($oldpaswd, $register->password)){
+                    
                     $register->password = $this->request->getPost('password');
+                    
                     if($register->update() != FALSE){
                         $this->flash->success('Password Change Successfully');
                         $this->view->setRenderLevel(\Phalcon\Mvc\View::LEVEL_NO_RENDER);

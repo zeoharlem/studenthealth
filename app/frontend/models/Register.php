@@ -30,7 +30,7 @@ class Register extends BaseModel{
                 'register_id',
                 array('reusable' => true));
         
-        $this->skipAttributesOnUpdate(array('jamb_reg_no','password'));
+        $this->skipAttributesOnUpdate(array('jamb_reg_no'));
     }
     
     public function beforeValidationOnCreate(){
@@ -39,6 +39,10 @@ class Register extends BaseModel{
         $this->codename = $this->getDI()->get('component')->helper->makeRandomInts(11);
         $this->jamb_reg_no          = $this->getDI()->get('session')->get('jambregno');
         $this->skipAttributesOnUpdate(array('password'));
+    }
+    
+    public function beforeValidationOnUpdate(){
+        
     }
     
     public function getStudentone(){

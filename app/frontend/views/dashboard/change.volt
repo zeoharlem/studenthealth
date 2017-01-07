@@ -23,7 +23,7 @@
                                         <form role="form" method="POST">
                                             <div class="form-body">
                                                 <div class="form-group form-md-line-input">
-                                                    <input type="password" name="password" class="form-control" id="form_control_1" placeholder="Enter your old password">
+                                                    <input type="password" name="oldpassword" class="form-control" id="form_control_1" placeholder="Enter your old password">
                                                     <label for="form_control_1">Old Password</label>
                                                     <span class="help-block">Some help goes here...</span>
                                                 </div>
